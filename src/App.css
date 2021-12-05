@@ -19,8 +19,12 @@ body {
   font-family: Poppins, sans-serif !important;
 }
 
-.btn-close-size {
-  font-size: 30px;
+.text-custom1 {
+  color: rgb(255, 107, 0) !important;
+}
+
+.bg-custom1 {
+  background-color: rgb(255, 107, 0) !important;
 }
 
 @media screen and (max-width: 768px) {

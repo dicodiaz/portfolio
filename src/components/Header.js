@@ -10,7 +10,7 @@ const Header = () => {
       <Navbar bg="secondary" variant="dark" expand="md" fixed="top" collapseOnSelect>
         <Container fluid>
           <Navbar.Brand>
-            <Nav.Link href="#heading" className="font-roboto text-white fw-bold py-0">
+            <Nav.Link href="#cover" className="font-roboto text-white fw-bold py-0">
               Dico Diaz Dussan
             </Nav.Link>
           </Navbar.Brand>
