@@ -1,0 +1,13 @@
+.navbar-brand a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar-nav a {
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.navbar-nav .active {
+  text-decoration: underline !important;
+}
