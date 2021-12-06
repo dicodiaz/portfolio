@@ -27,7 +27,7 @@ body {
   background-color: rgb(255, 107, 0) !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navbar-nav {
     height: calc(100vh - 56px);
     padding-top: 10px;

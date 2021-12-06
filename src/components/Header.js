@@ -19,9 +19,15 @@ const Header = () => {
           </Navbar.Toggle>
           <Navbar.Collapse>
             <Nav className="ms-auto">
-              <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="#portfolio" onClick={() => setOpen((prevOpen) => !prevOpen)}>
+                Portfolio
+              </Nav.Link>
+              <Nav.Link href="#about" onClick={() => setOpen((prevOpen) => !prevOpen)}>
+                About
+              </Nav.Link>
+              <Nav.Link href="#contact" onClick={() => setOpen((prevOpen) => !prevOpen)}>
+                Contact
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
