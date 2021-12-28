@@ -29,7 +29,7 @@ const Cover = ({ icons }) => (
           {icons.map((icon) => {
             const { id, href, src: Icon } = icon;
             return (
-              <a key={id} href={href} className="text-white fs-3">
+              <a key={id} href={href} className="text-white fs-3" target="_blank" rel="noreferrer">
                 <Icon />
               </a>
             );

@@ -1,12 +1,26 @@
 import { useState } from 'react';
-import { Badge, Button, Col, Container, Image, Modal, Row } from 'react-bootstrap';
+import {
+  Badge,
+  Button,
+  ButtonGroup,
+  Card,
+  Col,
+  Container,
+  Image,
+  Modal,
+  Row,
+} from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
 const Portfolio = () => {
   const [show, setShow] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = (i) => {
+    setShow(true);
+    setModalIndex(i);
+  };
 
   const projects = [
     {
@@ -76,7 +90,7 @@ const Portfolio = () => {
                           key={lang}
                           bg="light"
                           text="dark"
-                          className="border border-dark mx-1"
+                          className="border border-dark me-2"
                         >
                           {lang}
                         </Badge>
@@ -84,7 +98,7 @@ const Portfolio = () => {
                     </Row>
                   </Col>
                   <div>
-                    <Button className="bg-custom1 fw-bold border-0" onClick={handleShow}>
+                    <Button className="bg-custom1 fw-bold border-0" onClick={() => handleShow(i)}>
                       See Project
                     </Button>
                   </div>
@@ -93,12 +107,26 @@ const Portfolio = () => {
             ) : (
               <Col>
                 <Row className="mx-0 gx-0">
-                  <div className="border border-bottom-0">
-                    <Image src={img} fluid />
-                  </div>
-                  <Button className="bg-custom1 fw-bold border-0" onClick={handleShow}>
-                    See Project
-                  </Button>
+                  <Card>
+                    <Card.Img variant="top" src={img} alt={title} className="border-bottom" />
+                    <Card.Body>
+                      <Card.Title>{title}</Card.Title>
+                      <Card.Text className="mb-2">{desc}</Card.Text>
+                      <Row xs="auto" className="mx-0 mb-2">
+                        {langs.map((lang) => (
+                          <Badge key={lang} bg="secondary" className="me-2 mb-1">
+                            {lang}
+                          </Badge>
+                        ))}
+                      </Row>
+                      <Button
+                        className="bg-custom1 fw-bold border-0 w-100"
+                        onClick={() => handleShow(i)}
+                      >
+                        See Project
+                      </Button>
+                    </Card.Body>
+                  </Card>
                 </Row>
               </Col>
             );
@@ -107,18 +135,37 @@ const Portfolio = () => {
       </Container>
       <Modal show={show} onHide={handleClose} size="lg" centered>
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">Modal heading</Modal.Title>
+          <Modal.Title id="contained-modal-title-vcenter">{projects[modalIndex].title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          </p>
+          <Row xs="auto" className="mx-0 mb-2">
+            {projects[modalIndex].langs.map((lang) => (
+              <Badge key={lang} bg="light" text="dark" className="border border-dark me-2 mb-1">
+                {lang}
+              </Badge>
+            ))}
+          </Row>
+          <Image src={projects[modalIndex].img} fluid />
+          <p className="my-2">{projects[modalIndex].desc}</p>
+          <ButtonGroup className="w-100">
+            <Button
+              as="a"
+              className="bg-custom1 fw-bold border-dark"
+              href={projects[modalIndex].liveVersion}
+              target="_blank"
+            >
+              See Live
+            </Button>
+            <Button
+              as="a"
+              className="bg-custom1 fw-bold border-dark"
+              href={projects[modalIndex].sourceCode}
+              target="_blank"
+            >
+              See Source
+            </Button>
+          </ButtonGroup>
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={handleClose}>Close</Button>
-        </Modal.Footer>
       </Modal>
     </>
   );
