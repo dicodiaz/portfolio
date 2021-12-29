@@ -67,23 +67,28 @@ const Portfolio = () => {
         fluid
         id="portfolio"
         as="section"
-        className="bg-light min-vh-100 d-flex flex-column justify-content-center py-5"
+        className="bg-light min-vh-100 d-flex flex-column justify-content-center pt-5 pb-3"
       >
-        <h2 className="display-2 text-center font-crete-round border-bottom border-dark pb-2 mb-5 pt-5">
-          My Recent Works
-        </h2>
-        <Row xs={1} className="mx-0 gy-5">
+        <Row className="mx-0 g-0 pt-5 flex-column flex-md-row mb-md-5">
+          <Col md={5} lg={4}>
+            <h2 className="display-2 text-center font-crete-round mb-md-0">My Recent Works</h2>
+          </Col>
+          <Col md={7} lg={8} className="d-md-flex align-items-md-center pe-md-4">
+            <hr className="mt-0 mb-5 mb-md-0 w-100" />
+          </Col>
+        </Row>
+        <Row xs={1} className="mx-0 mb-md-4">
           {projects.map((project, i) => {
             const { id, title, desc, img, langs } = project;
             return i === 0 ? (
               <Col key={id}>
-                <Row className="mx-0 gx-0">
-                  <div className="mb-3">
+                <Row className="mx-0 gx-0 gx-md-3 mb-4 flex-column flex-md-row">
+                  <Col md={7} lg={6} className="mb-3">
                     <Image src={img} fluid />
-                  </div>
-                  <h3 className="font-crete-round display-4">{title}</h3>
-                  <p className="mb-1">{desc}</p>
-                  <Col>
+                  </Col>
+                  <Col md={5} lg={6}>
+                    <h3 className="font-crete-round display-4">{title}</h3>
+                    <p className="mb-1">{desc}</p>
                     <Row xs="auto" className="mx-0 mb-2">
                       {langs.map((lang) => (
                         <Badge
@@ -96,38 +101,36 @@ const Portfolio = () => {
                         </Badge>
                       ))}
                     </Row>
+                    <div>
+                      <Button className="bg-custom1 fw-bold border-0" onClick={() => handleShow(i)}>
+                        See Project
+                      </Button>
+                    </div>
                   </Col>
-                  <div>
-                    <Button className="bg-custom1 fw-bold border-0" onClick={() => handleShow(i)}>
-                      See Project
-                    </Button>
-                  </div>
                 </Row>
               </Col>
             ) : (
-              <Col>
-                <Row className="mx-0 gx-0">
-                  <Card>
-                    <Card.Img variant="top" src={img} alt={title} className="border-bottom" />
-                    <Card.Body>
-                      <Card.Title>{title}</Card.Title>
-                      <Card.Text className="mb-2">{desc}</Card.Text>
-                      <Row xs="auto" className="mx-0 mb-2">
-                        {langs.map((lang) => (
-                          <Badge key={lang} bg="secondary" className="me-2 mb-1">
-                            {lang}
-                          </Badge>
-                        ))}
-                      </Row>
-                      <Button
-                        className="bg-custom1 fw-bold border-0 w-100"
-                        onClick={() => handleShow(i)}
-                      >
-                        See Project
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </Row>
+              <Col md={4}>
+                <Card className="mb-4 mb-md-0 h-100">
+                  <Card.Img variant="top" src={img} alt={title} className="border-bottom" />
+                  <Card.Body className="d-md-flex flex-md-column justify-content-md-between">
+                    <Card.Title className="fw-bold">{title}</Card.Title>
+                    <Card.Text className="mb-2">{desc}</Card.Text>
+                    <Row xs="auto" className="mx-0 mb-2">
+                      {langs.map((lang) => (
+                        <Badge key={lang} bg="secondary" className="me-2 mb-1">
+                          {lang}
+                        </Badge>
+                      ))}
+                    </Row>
+                    <Button
+                      className="bg-custom1 fw-bold border-0 w-100"
+                      onClick={() => handleShow(i)}
+                    >
+                      See Project
+                    </Button>
+                  </Card.Body>
+                </Card>
               </Col>
             );
           })}
