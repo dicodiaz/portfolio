@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Container, Row } from 'react-bootstrap';
 
 const Footer = ({ icons }) => (
-  <Container fluid id="footer" as="footer" className="py-2 border-top">
+  <Container fluid id="footer" as="footer" className="py-2 border-top position-absolute bottom-0">
     <Row xs="auto" className="mx-0 justify-content-center">
       {icons.map((icon) => {
         const { id, href, src: Icon } = icon;

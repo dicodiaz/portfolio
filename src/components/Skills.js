@@ -20,7 +20,7 @@ const Skills = () => {
         'Chrome Dev Tools',
       ],
     },
-    Professional: {
+    'Soft Skills': {
       Bullet: BsCircleFill,
       list: ['Remote Pair-Programming', 'Teamwork', 'Leadership', 'Mentoring'],
     },
@@ -33,23 +33,25 @@ const Skills = () => {
       as="section"
       className="bg-dark text-white min-vh-75 d-flex flex-column justify-content-center pb-5 text-center"
     >
-      <hr className="my-5" />
-      {Object.entries(skills).map(([title, skills]) => {
-        const { Bullet, list } = skills;
-        return (
-          <Row key={title} xs={1} className="pt-5">
-            <h4 className="display-5 fw-bold d-flex justify-content-center align-items-center">
-              <Bullet className="fs-6 text-custom1 me-2" />
-              {title}
-            </h4>
-            {list.map((skill) => (
-              <Col key={skill} className="pt-3 lead">
-                {skill}
-              </Col>
-            ))}
-          </Row>
-        );
-      })}
+      <hr className="my-5 my-md-0" />
+      <Row xs={1} md={3} className="mx-0 g-0">
+        {Object.entries(skills).map(([title, skills]) => {
+          const { Bullet, list } = skills;
+          return (
+            <Col key={title} className="pt-5">
+              <h4 className="display-6 fw-bold d-flex justify-content-center align-items-center">
+                <Bullet className="fs-6 text-custom1 me-2 d-md-none" />
+                {title}
+              </h4>
+              {list.map((skill) => (
+                <Col key={skill} className="pt-3 lead">
+                  {skill}
+                </Col>
+              ))}
+            </Col>
+          );
+        })}
+      </Row>
     </Container>
   );
 };
