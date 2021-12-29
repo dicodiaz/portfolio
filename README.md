@@ -1,20 +1,16 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# React-Redux setup
+# My Portfolio
 
-This is a simple yet powerful React-Redux boilerplate for later use as a starting point in other projects. It derives from `create-react-app` with a few modifications, which include installing StyleLint, ESLint, and Bootstrap, removing unimportant files, and adding some content to the remaining files. It features a functional Counter component that implements Redux for state management, using `useSelector` and `useDispatch` hooks.
+"Your portfolio is one of the most powerful tools in your software developer toolbox; it’s the easiest way of showing what you’re truly capable of as a developer, and is a quick and simple way for recruiters and hiring managers to get an idea of what you can bring to their teams." - Microverse
 
 ## Mobile
 
 ![screenshot](./app_screenshot.png)
 
-## Desktop
-
-![screenshot](./app_screenshot-2.png)
-
 ## Live Demo
 
-[Live Demo Link](https://dicodiaz.me/react-redux-setup/)
+[Live Demo Link](https://dicodiaz.com.co)
 
 ## Built With
 
@@ -26,18 +22,12 @@ This is a simple yet powerful React-Redux boilerplate for later use as a startin
 
 ## Getting Started
 
-To get React and Redux up and running in another project, follow these simple steps:
+To get Rthis project up and running, follow these simple steps:
 
 1. Clone the repository into your machine (Or download the .zip file and extract).
 2. Open the project's folder.
-3. Copy and paste all files and folders except app_screenshot.png, app_screenshot-2.png, MIT.md, and README.md into the other project's root folder.
-4. Run `npm install`
-5. Run `npm start`
-
-### Considerations
-
-- Intended only for use as a starting point in other projects. Do not copy and paste these files into more mature projects as this will overwrite your package.json and package-lock.json files.
-- This project also includes Bootstrap for styling.
+3. Run `npm install`
+4. Run `npm start`
 
 ### Setup
 
