@@ -3,9 +3,11 @@ import { FaAngellist, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
+import About from './components/About';
 import Cover from './components/Cover';
 import Header from './components/Header';
 import Portfolio from './components/Portfolio';
+import Skills from './components/Skills';
 
 const App = () => {
   const icons = [
@@ -19,6 +21,8 @@ const App = () => {
       <main>
         <Cover icons={icons} />
         <Portfolio />
+        <About />
+        <Skills />
       </main>
     </Router>
   );
