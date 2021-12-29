@@ -1,13 +1,46 @@
-.navbar-brand a {
-  color: inherit;
-  text-decoration: none;
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: Inter, sans-serif;
 }
 
-.navbar-nav a {
-  padding: 0 10px;
-  text-decoration: none;
+.font-roboto {
+  font-family: Roboto, sans-serif !important;
 }
 
-.navbar-nav .active {
-  text-decoration: underline !important;
+.font-crete-round {
+  font-family: Crete Round, sans-serif !important;
+}
+
+.font-poppins {
+  font-family: Poppins, sans-serif !important;
+}
+
+.text-custom1 {
+  color: rgb(255, 107, 0) !important;
+}
+
+.bg-custom1 {
+  background-color: rgb(255, 107, 0) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-nav {
+    height: calc(100vh - 56px);
+    padding-top: 10px;
+  }
+
+  .navbar-nav a {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
 }
