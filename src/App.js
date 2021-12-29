@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import About from './components/About';
+import Contact from './components/Contact';
 import Cover from './components/Cover';
 import Header from './components/Header';
 import Portfolio from './components/Portfolio';
@@ -23,6 +24,7 @@ const App = () => {
         <Portfolio />
         <About />
         <Skills />
+        <Contact />
       </main>
     </Router>
   );
