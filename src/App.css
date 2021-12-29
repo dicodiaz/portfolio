@@ -51,9 +51,18 @@ body {
   background: url('./assets/bg-cover.svg') right bottom -50px no-repeat;
 }
 
+#about {
+  background: url('./assets/bg-about.svg') right bottom no-repeat;
+}
+
 @media screen and (min-width: 768px) {
   #cover {
     background: url('./assets/bg-cover-desktop.svg') right top no-repeat;
     background-size: contain;
+  }
+
+  #about {
+    background: url('./assets/bg-about-desktop.svg') right center no-repeat;
+    background-size: 32.5rem;
   }
 }
