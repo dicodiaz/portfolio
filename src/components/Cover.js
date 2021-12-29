@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion/dist/framer-motion';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 
@@ -11,7 +12,7 @@ const Cover = ({ icons }) => (
     <Row className="mx-0 pt-5">
       <Col md={5} lg={7}>
         <Row className="mx-0 flex-column flex-md-row">
-          <Col md={9} lg={10}>
+          <Col>
             <h1 className="display-1 font-crete-round text-custom1">
               Hey there. <br /> I&apos;m Dico
             </h1>
@@ -25,24 +26,37 @@ const Cover = ({ icons }) => (
           <Col
             md={{ span: 3, order: 'first' }}
             lg={2}
+            xl={1}
             className="d-md-flex flex-md-column justify-content-md-center"
           >
-            <Row xs="auto" className="mx-0 justify-content-md-center">
-              {icons.map((icon) => {
-                const { id, href, src: Icon } = icon;
-                return (
-                  <a
-                    key={id}
-                    href={href}
-                    className="text-white fs-3 py-md-2"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Icon />
-                  </a>
-                );
-              })}
-            </Row>
+            <motion.div
+              animate={{
+                opacity: [0, 1],
+                y: [200, -5, 0],
+                x: [-200, 5, 0],
+                scale: [1, 1, 1.1, 1],
+                rotate: [0, 0, -10, 10, 0],
+                transition: { ease: 'easeOut', duration: 2, delay: 2 },
+              }}
+            >
+              <Row xs="auto" className="mx-0 justify-content-md-center">
+                {icons.map((icon) => {
+                  const { id, href, src: Icon } = icon;
+                  return (
+                    <a
+                      key={id}
+                      id="social-icon"
+                      href={href}
+                      className="text-white fs-3 py-md-2"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Icon />
+                    </a>
+                  );
+                })}
+              </Row>
+            </motion.div>
           </Col>
         </Row>
       </Col>

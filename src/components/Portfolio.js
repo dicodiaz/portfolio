@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion/dist/framer-motion';
 import { useState } from 'react';
 import {
   Badge,
@@ -71,10 +72,24 @@ const Portfolio = () => {
       >
         <Row className="mx-0 g-0 pt-5 flex-column flex-md-row mb-md-5">
           <Col md={5} lg={4}>
-            <h2 className="display-2 text-center font-crete-round mb-md-0">My Recent Works</h2>
+            <motion.h2
+              className="display-2 text-center font-crete-round mb-md-0"
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
+              My Recent Works
+            </motion.h2>
           </Col>
           <Col md={7} lg={8} className="d-md-flex align-items-md-center pe-md-4">
-            <hr className="mt-0 mb-5 mb-md-0 w-100" />
+            <motion.hr
+              className="mt-0 mb-5 mb-md-0 w-100"
+              initial={{ opacity: 0, x: 200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            />
           </Col>
         </Row>
         <Row xs={1} className="mx-0 mb-md-4">
@@ -84,53 +99,78 @@ const Portfolio = () => {
               <Col key={id}>
                 <Row className="mx-0 gx-0 gx-md-3 mb-4 flex-column flex-md-row">
                   <Col md={7} lg={6} className="mb-3">
-                    <Image src={img} fluid />
+                    <motion.div
+                      initial={{ opacity: 0, x: -200 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 1 }}
+                      viewport={{ once: true }}
+                    >
+                      <Image src={img} fluid />
+                    </motion.div>
                   </Col>
                   <Col md={5} lg={6}>
-                    <h3 className="font-crete-round display-4">{title}</h3>
-                    <p className="mb-1">{desc}</p>
-                    <Row xs="auto" className="mx-0 mb-2">
-                      {langs.map((lang) => (
-                        <Badge
-                          key={lang}
-                          bg="light"
-                          text="dark"
-                          className="border border-dark me-2"
+                    <motion.div
+                      initial={{ opacity: 0, x: 200 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 1 }}
+                      viewport={{ once: true }}
+                    >
+                      <h3 className="font-crete-round display-4">{title}</h3>
+                      <p className="mb-1">{desc}</p>
+                      <Row xs="auto" className="mx-0 mb-2">
+                        {langs.map((lang) => (
+                          <Badge
+                            key={lang}
+                            bg="light"
+                            text="dark"
+                            className="border border-dark me-2"
+                          >
+                            {lang}
+                          </Badge>
+                        ))}
+                      </Row>
+                      <div>
+                        <Button
+                          className="bg-custom1 fw-bold border-0"
+                          onClick={() => handleShow(i)}
                         >
-                          {lang}
-                        </Badge>
-                      ))}
-                    </Row>
-                    <div>
-                      <Button className="bg-custom1 fw-bold border-0" onClick={() => handleShow(i)}>
-                        See Project
-                      </Button>
-                    </div>
+                          See Project
+                        </Button>
+                      </div>
+                    </motion.div>
                   </Col>
                 </Row>
               </Col>
             ) : (
               <Col md={4}>
-                <Card className="mb-4 mb-md-0 h-100">
-                  <Card.Img variant="top" src={img} alt={title} className="border-bottom" />
-                  <Card.Body className="d-md-flex flex-md-column justify-content-md-between">
-                    <Card.Title className="fw-bold">{title}</Card.Title>
-                    <Card.Text className="mb-2">{desc}</Card.Text>
-                    <Row xs="auto" className="mx-0 mb-2">
-                      {langs.map((lang) => (
-                        <Badge key={lang} bg="secondary" className="me-2 mb-1">
-                          {lang}
-                        </Badge>
-                      ))}
-                    </Row>
-                    <Button
-                      className="bg-custom1 fw-bold border-0 w-100"
-                      onClick={() => handleShow(i)}
-                    >
-                      See Project
-                    </Button>
-                  </Card.Body>
-                </Card>
+                <motion.div
+                  initial={{ opacity: 0, x: 200 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.5 * i }}
+                  viewport={{ once: true }}
+                  className="mb-4 mb-md-0 h-100"
+                >
+                  <Card className="h-100">
+                    <Card.Img variant="top" src={img} alt={title} className="border-bottom" />
+                    <Card.Body className="d-md-flex flex-md-column justify-content-md-between">
+                      <Card.Title className="fw-bold">{title}</Card.Title>
+                      <Card.Text className="mb-2">{desc}</Card.Text>
+                      <Row xs="auto" className="mx-0 mb-2">
+                        {langs.map((lang) => (
+                          <Badge key={lang} bg="secondary" className="me-2 mb-1">
+                            {lang}
+                          </Badge>
+                        ))}
+                      </Row>
+                      <Button
+                        className="bg-custom1 fw-bold border-0 w-100"
+                        onClick={() => handleShow(i)}
+                      >
+                        See Project
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                </motion.div>
               </Col>
             );
           })}
@@ -156,6 +196,7 @@ const Portfolio = () => {
               className="bg-custom1 fw-bold border-dark"
               href={projects[modalIndex].liveVersion}
               target="_blank"
+              rel="noreferrer"
             >
               See Live
             </Button>
@@ -164,6 +205,7 @@ const Portfolio = () => {
               className="bg-custom1 fw-bold border-dark"
               href={projects[modalIndex].sourceCode}
               target="_blank"
+              rel="noreferrer"
             >
               See Source
             </Button>

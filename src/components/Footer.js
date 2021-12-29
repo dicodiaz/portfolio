@@ -7,7 +7,14 @@ const Footer = ({ icons }) => (
       {icons.map((icon) => {
         const { id, href, src: Icon } = icon;
         return (
-          <a key={id} href={href} className="text-secondary fs-3" target="_blank" rel="noreferrer">
+          <a
+            key={id}
+            id="social-icon"
+            href={href}
+            className="text-secondary fs-3"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Icon />
           </a>
         );

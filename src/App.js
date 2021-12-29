@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaAngellist, FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import About from './components/About';
@@ -18,7 +17,7 @@ const App = () => {
     { id: uuidv4(), href: 'https://angel.co/u/dico-diaz-dussan', src: FaAngellist },
   ];
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <>
       <Header />
       <main>
         <Cover icons={icons} />
@@ -28,7 +27,7 @@ const App = () => {
         <Contact />
       </main>
       <Footer icons={icons} />
-    </Router>
+    </>
   );
 };
 

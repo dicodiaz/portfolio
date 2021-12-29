@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg="secondary" variant="dark" expand="md" fixed="top" collapseOnSelect>
+      <Navbar id="navbar" bg="secondary" variant="dark" expand="md" fixed="top" collapseOnSelect>
         <Container fluid>
           <Navbar.Brand>
             <Nav.Link href="#cover" className="font-roboto text-white fw-bold py-0">

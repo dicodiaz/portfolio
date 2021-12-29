@@ -5,6 +5,7 @@
 
 body {
   font-family: Inter, sans-serif;
+  overflow-x: hidden;
 }
 
 .font-roboto {
@@ -65,4 +66,17 @@ body {
     background: url('./assets/bg-about-desktop.svg') right center no-repeat;
     background-size: 32.5rem;
   }
+}
+
+/* Animations & Transitions */
+
+a:hover,
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+#social-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
