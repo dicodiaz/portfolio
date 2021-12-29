@@ -26,8 +26,8 @@ const App = () => {
         <About />
         <Skills />
         <Contact />
-        <Footer icons={icons} />
       </main>
+      <Footer icons={icons} />
     </Router>
   );
 };
