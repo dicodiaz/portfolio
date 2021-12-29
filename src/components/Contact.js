@@ -7,7 +7,7 @@ const Contact = () => (
     as="section"
     className="min-vh-75 d-flex flex-column justify-content-center py-5"
   >
-    <Row className="mx-0">
+    <Row className="mx-0 pt-5">
       <h2 className="text-center display-5 fw-bold mb-4">
         I&apos;m always interested in hearing about new projects, so if you&apos;d like to chat
         please get in touch.

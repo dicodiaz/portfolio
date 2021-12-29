@@ -6,6 +6,7 @@ import './App.css';
 import About from './components/About';
 import Contact from './components/Contact';
 import Cover from './components/Cover';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
@@ -25,6 +26,7 @@ const App = () => {
         <About />
         <Skills />
         <Contact />
+        <Footer icons={icons} />
       </main>
     </Router>
   );
