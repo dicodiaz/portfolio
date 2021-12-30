@@ -8,6 +8,10 @@
 
 ![screenshot](./app_screenshot.png)
 
+## Desktop
+
+![screenshot](./app_screenshot-2.png)
+
 ## Live Demo
 
 [Live Demo Link](https://dicodiaz.com.co)
