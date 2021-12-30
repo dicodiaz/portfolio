@@ -12,8 +12,11 @@ import {
   Row,
 } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
+import { useIsMedium } from '../hooks/useMediaQuery';
 
 const Portfolio = () => {
+  const isMedium = useIsMedium();
+
   const [show, setShow] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
 
@@ -68,7 +71,7 @@ const Portfolio = () => {
         fluid
         id="portfolio"
         as="section"
-        className="bg-light min-vh-100 d-flex flex-column justify-content-center pt-5 pb-3"
+        className="bg-light min-vh-100 d-flex flex-column justify-content-center py-5"
       >
         <Row className="mx-0 g-0 pt-5 flex-column flex-md-row mb-md-5">
           <Col md={5} lg={4}>
@@ -92,7 +95,7 @@ const Portfolio = () => {
             />
           </Col>
         </Row>
-        <Row xs={1} className="mx-0 mb-md-4">
+        <Row xs={1} className="mx-0 gy-4 gy-md-0">
           {projects.map((project, i) => {
             const { id, title, desc, img, langs } = project;
             return i === 0 ? (
@@ -142,13 +145,13 @@ const Portfolio = () => {
                 </Row>
               </Col>
             ) : (
-              <Col md={4}>
+              <Col md={4} key={id}>
                 <motion.div
                   initial={{ opacity: 0, x: 200 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 0.5 * i }}
+                  transition={{ duration: 1, delay: isMedium ? 0.5 * i : 0 }}
                   viewport={{ once: true }}
-                  className="mb-4 mb-md-0 h-100"
+                  className="h-100"
                 >
                   <Card className="h-100">
                     <Card.Img variant="top" src={img} alt={title} className="border-bottom" />

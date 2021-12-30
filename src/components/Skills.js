@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion/dist/framer-motion';
 import { Col, Container, Row } from 'react-bootstrap';
 import { BsCircleFill, BsDiamondFill, BsSquareFill } from 'react-icons/bs';
+import { useIsMedium } from '../hooks/useMediaQuery';
 
 const Skills = () => {
+  const isMedium = useIsMedium();
+
   const skills = {
     'Front-End': {
       Bullet: BsDiamondFill,
@@ -43,7 +46,7 @@ const Skills = () => {
               <motion.div
                 initial={{ opacity: 0, x: 200 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.5 * i }}
+                transition={{ duration: 1, delay: isMedium ? 0.5 * i : 0 }}
                 viewport={{ once: true }}
               >
                 <h4 className="display-6 fw-bold d-flex justify-content-center align-items-center">
