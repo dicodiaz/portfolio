@@ -1,34 +1,10 @@
 import { motion } from 'framer-motion/dist/framer-motion';
 import { Col, Container, Row } from 'react-bootstrap';
-import { BsCircleFill, BsDiamondFill, BsSquareFill } from 'react-icons/bs';
-import { useIsMedium } from '../hooks/useMediaQuery';
+import skills from '../../data/skills';
+import { useIsMedium } from '../../hooks/useMediaQuery';
 
 const Skills = () => {
   const isMedium = useIsMedium();
-
-  const skills = {
-    'Front-End': {
-      Bullet: BsDiamondFill,
-      list: ['JavaScript', 'React', 'Redux', 'Bootstrap', 'HTML5', 'CSS3', 'Jest'],
-    },
-    'Tools & Methods': {
-      Bullet: BsSquareFill,
-      list: [
-        'Git',
-        'Gitflow',
-        'GitHub',
-        'Heroku',
-        'Netlify',
-        'TDD',
-        'Responsive Development',
-        'Chrome Dev Tools',
-      ],
-    },
-    'Soft Skills': {
-      Bullet: BsCircleFill,
-      list: ['Remote Pair-Programming', 'Teamwork', 'Leadership', 'Mentoring'],
-    },
-  };
 
   return (
     <Container

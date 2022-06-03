@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
 import { Container, Row } from 'react-bootstrap';
+import icons from '../../data/icons';
 
-const Footer = ({ icons }) => (
+const Footer = () => (
   <Container fluid id="footer" as="footer" className="py-2 border-top position-absolute bottom-0">
     <Row xs="auto" className="mx-0 justify-content-center">
       {icons.map((icon) => {
@@ -22,15 +22,5 @@ const Footer = ({ icons }) => (
     </Row>
   </Container>
 );
-
-Footer.propTypes = {
-  icons: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
-      src: PropTypes.func.isRequired,
-    }),
-  ).isRequired,
-};
 
 export default Footer;
