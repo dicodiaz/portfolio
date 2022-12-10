@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://dicodiaz.com.co)
+[Live Demo Link](https://portfolio.dicodiaz.com.co)
 
 ## Built With
 
@@ -24,7 +24,7 @@
 
 ## Getting Started
 
-To get Rthis project up and running, follow these simple steps:
+To get this project up and running, follow these simple steps:
 
 1. Clone the repository into your machine (Or download the .zip file and extract).
 2. Open the project's folder.
@@ -41,7 +41,7 @@ Follow the steps described before.
 
 - GitHub: [@dicodiaz](https://github.com/dicodiaz)
 - LinkedIn: [Dico Diaz Dussan](https://www.linkedin.com/in/dico-diaz-dussan/)
-- Portfolio: [dicodiaz.com.co](https://dicodiaz.com.co)
+- Portfolio: [portfolio.dicodiaz.com.co](https://portfolio.dicodiaz.com.co)
 
 ## 🤝 Contributing
 
