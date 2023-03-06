@@ -1,7 +1,9 @@
 import { BsCircleFill, BsDiamondFill, BsSquareFill } from 'react-icons/bs';
 
-const skills = {
-  'Front-End': {
+const skills = [
+  {
+    id: '1',
+    title: 'Front-End',
     Bullet: BsDiamondFill,
     list: [
       'TypeScript',
@@ -19,14 +21,18 @@ const skills = {
       'Kotlin',
     ],
   },
-  'Tools & Methods': {
+  {
+    id: '2',
+    title: 'Tools & Methods',
     Bullet: BsSquareFill,
     list: ['Git', 'GitHub', 'Netlify', 'TDD', 'Responsive Development', 'Chrome Dev Tools'],
   },
-  'Soft Skills': {
+  {
+    id: '3',
+    title: 'Soft Skills',
     Bullet: BsCircleFill,
     list: ['Remote Pair-Programming', 'Teamwork', 'Leadership', 'Mentoring', 'Proactivity'],
   },
-};
+];
 
 export default skills;

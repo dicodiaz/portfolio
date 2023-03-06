@@ -1,23 +1,46 @@
 import { useEffect, useState } from 'react';
 
 const useMediaQuery = (query) => {
-  const [matches, setMatches] = useState(false);
+  const getMatches = (query) => {
+    // Prevents SSR issues
+    if (typeof window !== 'undefined') {
+      return window.matchMedia(query).matches;
+    }
+    return false;
+  };
+
+  const [matches, setMatches] = useState(getMatches(query));
+
+  function handleChange() {
+    setMatches(getMatches(query));
+  }
 
   useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
+    const matchMedia = window.matchMedia(query);
+
+    // Triggered at the first client-side load and if query changes
+    handleChange();
+
+    // Listen matchMedia
+    if (matchMedia.addListener) {
+      matchMedia.addListener(handleChange);
+    } else {
+      matchMedia.addEventListener('change', handleChange);
     }
-    const listener = () => {
-      setMatches(media.matches);
+
+    return () => {
+      if (matchMedia.removeListener) {
+        matchMedia.removeListener(handleChange);
+      } else {
+        matchMedia.removeEventListener('change', handleChange);
+      }
     };
-    media.addListener(listener);
-    return () => media.removeListener(listener);
-  }, [matches, query]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
 
   return matches;
 };
 
-export default useMediaQuery;
-
 export const useIsMedium = () => useMediaQuery('(min-width: 768px)');
+
+export default useMediaQuery;
