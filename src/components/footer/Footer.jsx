@@ -2,10 +2,10 @@ import { Container, Row } from 'react-bootstrap';
 import icons from '../../data/icons';
 
 const Footer = () => (
-  <Container fluid id="footer" as="footer" className="py-2 border-top position-absolute bottom-0">
+  <Container fluid id="footer" as="footer" className="py-2 border-top fixed-bottom">
     <Row xs="auto" className="mx-0 justify-content-center">
       {icons.map((icon) => {
-        const { id, href, src: Icon } = icon;
+        const { id, href, Icon } = icon;
         return (
           <a
             key={id}

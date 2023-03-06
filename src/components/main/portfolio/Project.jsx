@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion/dist/framer-motion';
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { Badge, Button, Card, Col, Row } from 'react-bootstrap';
 
-const Project = ({ project, onClick, delay }) => {
-  const { title, desc, img, langs } = project;
+const Project = ({ data, onClick, delay }) => {
+  const { title, desc, img, langs } = data;
 
   return (
     <Col md={4}>
@@ -37,7 +37,7 @@ const Project = ({ project, onClick, delay }) => {
 };
 
 Project.propTypes = {
-  project: PropTypes.shape({
+  data: PropTypes.shape({
     title: PropTypes.string,
     desc: PropTypes.string,
     img: PropTypes.string,

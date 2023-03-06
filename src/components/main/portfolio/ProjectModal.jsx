@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 import { Badge, Button, ButtonGroup, Image, Modal, Row } from 'react-bootstrap';
-import projects from '../../../data/projects';
 
-const ProjectModal = ({ show, modalIndex, closeModal }) => {
-  const { title, desc, img, langs, liveVersion, sourceCode } = projects[modalIndex];
+const ProjectModal = ({ data, isOpen, onClose }) => {
+  const { title, desc, img, langs, liveVersion, sourceCode } = data;
 
   return (
-    <Modal show={show} onHide={closeModal} size="lg" centered>
+    <Modal show={isOpen} onHide={onClose} size="lg" centered>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">{title}</Modal.Title>
       </Modal.Header>
@@ -46,9 +45,16 @@ const ProjectModal = ({ show, modalIndex, closeModal }) => {
 };
 
 ProjectModal.propTypes = {
-  show: PropTypes.bool.isRequired,
-  modalIndex: PropTypes.number.isRequired,
-  closeModal: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    img: PropTypes.string,
+    langs: PropTypes.arrayOf(PropTypes.string),
+    liveVersion: PropTypes.string,
+    sourceCode: PropTypes.string,
+  }).isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default ProjectModal;

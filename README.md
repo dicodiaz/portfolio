@@ -17,8 +17,9 @@
 ## Built With
 
 - React
-- Redux
-- Bootstrap
+- React Bootstrap
+- Framer Motion
+- React Testing Library
 - VSCode
 - Git & GitHub
 
@@ -28,8 +29,8 @@ To get this project up and running, follow these simple steps:
 
 1. Clone the repository into your machine (Or download the .zip file and extract).
 2. Open the project's folder.
-3. Run `npm install`
-4. Run `npm start`
+3. Run `pnpm install`
+4. Run `pnpm dev`
 
 ### Setup
 

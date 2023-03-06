@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion/dist/framer-motion';
-import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useCallback, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import projects from '../../data/projects';
+import useBoolean from '../../hooks/useBoolean';
 import { useIsMedium } from '../../hooks/useMediaQuery';
 import HighlightedProject from './portfolio/HighlightedProject';
 import Project from './portfolio/Project';
@@ -9,15 +10,16 @@ import ProjectModal from './portfolio/ProjectModal';
 
 const Portfolio = () => {
   const isMedium = useIsMedium();
-
-  const [show, setShow] = useState(false);
+  const { value: isModalOpen, setTrue: openModal, setFalse: closeModal } = useBoolean();
   const [modalIndex, setModalIndex] = useState(0);
 
-  const openModal = (i) => {
-    setShow(true);
-    setModalIndex(i);
-  };
-  const closeModal = () => setShow(false);
+  const handleOpen = useCallback((index) => {
+    setModalIndex(index);
+    openModal();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const projectModalData = projects[modalIndex];
 
   return (
     <>
@@ -50,19 +52,19 @@ const Portfolio = () => {
           </Col>
         </Row>
         <Row xs={1} className="mx-0 gy-4 gy-md-0">
-          {projects.map((project, i) => {
+          {projects.map((project, index) => {
             const { id } = project;
-            const delay = isMedium ? 0.5 * i : 0;
+            const delay = isMedium ? 0.5 * index : 0;
 
-            return i === 0 ? (
-              <HighlightedProject key={id} project={project} onClick={() => openModal(i)} />
+            return index === 0 ? (
+              <HighlightedProject key={id} data={project} onClick={() => handleOpen(index)} />
             ) : (
-              <Project key={id} project={project} onClick={() => openModal(i)} delay={delay} />
+              <Project key={id} data={project} onClick={() => handleOpen(index)} delay={delay} />
             );
           })}
         </Row>
       </Container>
-      <ProjectModal show={show} modalIndex={modalIndex} closeModal={closeModal} />
+      <ProjectModal data={projectModalData} isOpen={isModalOpen} onClose={closeModal} />
     </>
   );
 };

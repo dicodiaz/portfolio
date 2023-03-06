@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion/dist/framer-motion';
+import { motion } from 'framer-motion';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 
 const About = () => (

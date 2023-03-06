@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion/dist/framer-motion';
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { Badge, Button, Col, Image, Row } from 'react-bootstrap';
 
-const HighlightedProject = ({ project, onClick }) => {
-  const { title, desc, img, langs } = project;
+const HighlightedProject = ({ data, onClick }) => {
+  const { title, desc, img, langs } = data;
 
   return (
     <Col>
@@ -47,7 +47,7 @@ const HighlightedProject = ({ project, onClick }) => {
 };
 
 HighlightedProject.propTypes = {
-  project: PropTypes.shape({
+  data: PropTypes.shape({
     title: PropTypes.string,
     desc: PropTypes.string,
     img: PropTypes.string,

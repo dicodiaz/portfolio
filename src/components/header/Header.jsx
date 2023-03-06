@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import navLinks from '../../data/navLinks';
+import useBoolean from '../../hooks/useBoolean';
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
-
-  const toggleMenu = () => setOpen((prevOpen) => !prevOpen);
-  const closeMenu = () => setOpen(false);
+  const { value: isMenuOpen, setFalse: closeMenu, toggle: toggleMenu } = useBoolean();
 
   return (
     <header>
@@ -18,19 +16,18 @@ const Header = () => {
             </Nav.Link>
           </Navbar.Brand>
           <Navbar.Toggle className="border-0" onClick={toggleMenu}>
-            {open ? <AiOutlineClose /> : <AiOutlineMenu />}
+            {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
           </Navbar.Toggle>
           <Navbar.Collapse>
             <Nav className="ms-auto">
-              <Nav.Link href="#portfolio" onClick={closeMenu}>
-                Portfolio
-              </Nav.Link>
-              <Nav.Link href="#about" onClick={closeMenu}>
-                About
-              </Nav.Link>
-              <Nav.Link href="#contact" onClick={closeMenu}>
-                Contact
-              </Nav.Link>
+              {navLinks.map((navLink) => {
+                const { id, href, text } = navLink;
+                return (
+                  <Nav.Link key={id} href={href} onClick={closeMenu}>
+                    {text}
+                  </Nav.Link>
+                );
+              })}
             </Nav>
           </Navbar.Collapse>
         </Container>
