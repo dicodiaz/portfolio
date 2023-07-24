@@ -9,7 +9,11 @@ const Skills: FC = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
   return (
-    <Container id="skills" className="bg-dark text-white text-center text-md-start px-4" fluid>
+    <Container
+      id="skills"
+      className="bg-dark text-white text-center text-md-start px-4 px-md-5 px-lg-6"
+      fluid
+    >
       <Row xs={1} md={3} className="py-6">
         {skills.map((skill, index) => {
           const { id, title, Bullet, names } = skill;

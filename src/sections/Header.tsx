@@ -22,7 +22,7 @@ const Header: FC = () => {
         onToggle={handleToggle}
         collapseOnSelect
       >
-        <Container className="px-4 px-md-0">
+        <Container className="px-3 px-md-5 px-lg-6" fluid>
           <Navbar.Brand href="#headline" className="font-roboto text-white">
             Dico Diaz Dussan
           </Navbar.Brand>

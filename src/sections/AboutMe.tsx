@@ -5,7 +5,7 @@ import '../styles/about_me.scss';
 
 const AboutMe: FC = () => {
   return (
-    <Container as="section" id="about_me" className="bg-dark text-white px-4 min-vh-50" fluid>
+    <Container as="section" id="about_me" className="bg-dark text-white px-4 px-md-5 px-lg-6" fluid>
       <Row className="py-6">
         <Col md={6}>
           <motion.div

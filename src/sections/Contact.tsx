@@ -24,7 +24,8 @@ const Contact: FC = () => {
       <Container
         as="section"
         id="contact"
-        className="min-vh-100 d-flex align-items-center py-6 px-4 px-md-0"
+        className="min-vh-100 d-flex align-items-center py-6 px-4 px-md-5 px-lg-6"
+        fluid
       >
         <Row xs={1}>
           <Col md={5} lg={4}>

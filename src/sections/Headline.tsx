@@ -21,7 +21,7 @@ const Headline: FC = () => {
       className="bg-dark text-white min-vh-100 d-flex align-items-center"
       fluid
     >
-      <Row className="pt-5 px-3 px-md-0 ps-md-5">
+      <Row className="pt-5 px-3 px-md-5 px-lg-6">
         <Col md={5} lg={6} xl={7}>
           <Row className="flex-column flex-md-row">
             <Col className="ps-md-5">
