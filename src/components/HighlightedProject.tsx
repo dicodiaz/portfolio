@@ -13,7 +13,7 @@ const HighlightedProject: FC<HighlightedProjectProps> = ({ data, image, onSeePro
   const { title, description, languages } = data;
 
   return (
-    <Col>
+    <Col className="px-md-2">
       <Row className="mb-4 flex-column flex-md-row">
         <Col md={6} className="mb-4 mb-md-0 d-flex justify-content-center align-items-center">
           <motion.div
@@ -34,7 +34,7 @@ const HighlightedProject: FC<HighlightedProjectProps> = ({ data, image, onSeePro
           >
             <h4 className="fs-h4">{title}</h4>
             <p>{description}</p>
-            <Row xs="auto" className="mb-1 badges">
+            <Row xs="auto" className="mb-1">
               {languages.map((language) => (
                 <Badge key={language} bg="white">
                   {language}

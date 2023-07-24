@@ -21,13 +21,7 @@
   margin-bottom: 0.5rem;
 }
 
-.project .badge {
-  background-color: rgba(255, 255, 255, 0.24);
-  border: none;
-  color: white;
-}
-
-.badges > .badge:not(:last-child) {
+.badge:not(:last-child) {
   margin-right: 0.5rem;
 }
 
@@ -35,8 +29,14 @@
   opacity: 0.1 !important;
 }
 
-.projects > .project:not(:last-child) {
+.project:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+.project .badge {
+  background-color: rgba(255, 255, 255, 0.24);
+  border: none;
+  color: white;
 }
 
 @media screen and (min-width: 768px) {
@@ -78,6 +78,20 @@
 
   .me-2-half {
     margin-right: 0.75rem !important;
+  }
+
+  .project:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+
+  .project:nth-child(n + 4) {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .project:nth-child(4) {
+    margin-top: 0rem;
   }
 }
 

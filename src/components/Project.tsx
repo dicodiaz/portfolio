@@ -14,7 +14,7 @@ const Project: FC<ProjectProps> = ({ data, image, onSeeProjectClick, delay }) =>
   const { title, description, languages } = data;
 
   return (
-    <Col md={6} lg={4} className="project px-md-3">
+    <Col md={6} lg={4} className="project px-md-2">
       <motion.div
         initial={{ opacity: 0, x: 200 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -28,7 +28,7 @@ const Project: FC<ProjectProps> = ({ data, image, onSeeProjectClick, delay }) =>
               <Col xs="auto">
                 <Card.Title className="fs-h4">{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>
-                <Row xs="auto" className="badges">
+                <Row xs="auto">
                   {languages.map((language) => (
                     <Badge key={language} bg="none" className="badge">
                       {language}

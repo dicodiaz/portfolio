@@ -19,7 +19,7 @@ const ProjectModal: FC<ProjectModalProps> = ({ data, show, onHide }) => {
         <Modal.Title className="font-roboto fs-h4 text-info">{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Row xs="auto" className="mb-3 mb-md-4 badges">
+        <Row xs="auto" className="mb-3 mb-md-4">
           {languages.map((language) => (
             <Badge key={language} bg="white">
               {language}
