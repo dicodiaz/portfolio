@@ -1,0 +1,24 @@
+#about_me {
+  background: url('../assets/bg_about_mobile.svg') right bottom no-repeat;
+}
+
+.about-me-separator {
+  height: 1px;
+  background-color: white;
+  width: 100%;
+}
+
+.min-vh-50 {
+  min-height: 50vh !important;
+}
+
+@media screen and (min-width: 768px) {
+  #about_me {
+    background: url('../assets/bg_about_desktop.svg') right center no-repeat;
+    background-size: 32.5rem;
+  }
+
+  .pe-md-6 {
+    padding-right: 4rem !important;
+  }
+}

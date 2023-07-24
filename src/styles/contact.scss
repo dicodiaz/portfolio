@@ -1,0 +1,32 @@
+.mb-5-half {
+  margin-bottom: 3.62rem !important;
+}
+
+.text-area {
+  background-color: #fbf8f7 !important;
+  padding: 0.75rem !important;
+  color: #3c3a39 !important;
+
+  &::placeholder {
+    font-style: italic;
+    color: #3c3a39 !important;
+  }
+}
+
+.btn-submit {
+  width: 8.3rem;
+}
+
+.btn-close {
+  box-shadow: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .name > *:first-child {
+    padding-right: 0.75rem;
+  }
+
+  .name > *:last-child {
+    padding-left: 0.75rem;
+  }
+}

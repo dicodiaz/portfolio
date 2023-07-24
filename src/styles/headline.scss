@@ -1,0 +1,16 @@
+#headline {
+  background: url('../assets/bg_headline_mobile.svg') right bottom -50px no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  #headline {
+    background: url('../assets/bg_headline_desktop.svg') right top no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #headline {
+    background: none;
+  }
+}

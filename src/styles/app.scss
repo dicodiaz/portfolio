@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import '../../node_modules/bootstrap/scss/functions';
+
+$primary: #ff6b00;
+$secondary: #3c3a39;
+$light: #dbd8d7;
+$dark: #1c1a19;
+$info: #172b4d;
+
+$font-family-base: 'Inter';
+$headings-font-family: 'Crete Round';
+
+$grid-gutter-width: 0;
+
+$navbar-brand-font-size: 1.125rem;
+
+$paragraph-margin-bottom: 0.75rem;
+
+$link-color: white;
+$link-decoration: none;
+
+$badge-font-size: 0.9375rem;
+$badge-font-weight: 500;
+$badge-color: #091e42;
+$badge-padding-y: 0.625em;
+$badge-padding-x: 0.75em;
+$badge-border-radius: 0;
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 0.75rem;
+$btn-font-size: 1.0625rem;
+$btn-font-weight: 700;
+$btn-disabled-opacity: 1;
+$btn-border-radius: 0;
+
+$card-border-width: 0;
+$card-border-radius: 0;
+$card-height: 25rem;
+$card-color: white;
+
+$modal-dialog-margin: 1rem;
+$modal-content-border-radius: 0;
+$modal-header-border-width: 0;
+$modal-md: 96%;
+$modal-lg: 80%;
+$modal-xl: 80%;
+
+$input-padding-y: 1rem;
+$input-padding-x: 1rem;
+$input-font-size: 0.9375rem;
+$input-color: darken(#979493, 15%);
+$input-border-color: $light;
+$input-border-radius: 0;
+$input-focus-box-shadow: none;
+$input-placeholder-color: #979493;
+
+$toast-box-shadow: none;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+.font-roboto {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+
+.font-poppins {
+  font-family: Poppins, sans-serif;
+}
+
+.btn-primary {
+  // button-variant($background, $border, $text, $hover-background, $hover-border, $hover-text)
+  @include button-variant($primary, $primary, white, #fff5e1, $primary, $primary);
+
+  letter-spacing: 0.03188rem;
+}
+
+.btn-primary:active {
+  background-color: #e05304 !important;
+  border-color: #e05304 !important;
+  color: #f4f1f0 !important;
+}
+
+.btn-primary:disabled {
+  background-color: #f4f1f0 !important;
+  border-color: #f4f1f0 !important;
+  color: #5b5957 !important;
+}
+
+.fs-h1 {
+  font-size: 4.5rem !important;
+  line-height: 5.5rem !important;
+}
+
+.fs-h2 {
+  font-size: 3.5rem !important;
+  line-height: 4rem !important;
+}
+
+.fs-h3 {
+  font-size: 2.5rem !important;
+  line-height: 3.25rem !important;
+}
+
+.fs-h4 {
+  font-size: 2rem !important;
+  line-height: 2.75rem !important;
+}
+
+.fs-h5 {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+.fs-h6 {
+  font-size: 1.375rem !important;
+  line-height: 2.7rem !important;
+}

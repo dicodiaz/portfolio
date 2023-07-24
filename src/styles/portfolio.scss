@@ -1,0 +1,92 @@
+.py-6 {
+  padding-block: 7.5rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 5rem !important;
+}
+
+.pb-4-half {
+  padding-bottom: 2.125rem !important;
+}
+
+.title-separator {
+  height: 1px;
+  background-color: #212121;
+  width: 100%;
+}
+
+.badge {
+  border: 1px solid #8993a4;
+  margin-bottom: 0.5rem;
+}
+
+.project .badge {
+  background-color: rgba(255, 255, 255, 0.24);
+  border: none;
+  color: white;
+}
+
+.badges > .badge:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.opacity-10 {
+  opacity: 0.1 !important;
+}
+
+.projects > .project:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card-img {
+    height: 100%;
+    transition:
+      opacity 0.15s ease-in-out,
+      height 0.15s ease-in-out;
+  }
+
+  .card:hover > .card-img {
+    opacity: 100 !important;
+  }
+
+  .card-img-overlay {
+    transition: visibility 0.05s ease-in-out;
+  }
+
+  .card:hover > .card-img-overlay {
+    visibility: hidden;
+  }
+
+  .card > .btn {
+    visibility: hidden;
+    margin-bottom: -3.625rem;
+    transition:
+      color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out,
+      visibility 0.15s ease-in-out,
+      margin 0.15s ease-in-out;
+  }
+
+  .card:hover > .btn {
+    visibility: visible;
+    margin-bottom: 0;
+  }
+
+  .me-2-half {
+    margin-right: 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .d-xs-none {
+    display: none;
+  }
+
+  .fs-xs-7 {
+    font-size: 0.75rem;
+  }
+}
