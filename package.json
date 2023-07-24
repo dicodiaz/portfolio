@@ -37,7 +37,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
     "prettier": "^3.0.0",
-    "stylelint": "13.x",
+    "stylelint": "~13.13.1",
     "stylelint-config-standard": "21.x",
     "stylelint-csstree-validator": "1.x",
     "stylelint-scss": "3.x",
