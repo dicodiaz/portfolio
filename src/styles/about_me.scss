@@ -14,11 +14,17 @@
 
 @media screen and (min-width: 768px) {
   #about_me {
-    background: url('../assets/bg_about_desktop.svg') right center no-repeat;
-    background-size: 32.5rem;
+    background: url('../assets/bg_about_desktop.svg') top 60% right no-repeat;
+    background-size: 30rem;
   }
 
   .pe-md-6 {
     padding-right: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #about_me {
+    background-size: 35rem;
   }
 }

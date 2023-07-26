@@ -4,8 +4,14 @@
 
 @media screen and (min-width: 768px) {
   #headline {
-    background: url('../assets/bg_headline_desktop.svg') right top no-repeat;
+    background: url('../assets/bg_headline_desktop.svg') top right -8rem no-repeat;
     background-size: contain;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #headline {
+    background-position: top right -4rem;
   }
 }
 

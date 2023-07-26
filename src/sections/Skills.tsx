@@ -25,13 +25,10 @@ const Skills: FC = () => {
                 transition={{ duration: 1, delay: isDesktop ? 0.5 * index : 0 }}
                 viewport={{ once: true }}
               >
-                <Row
-                  xs="auto"
-                  className="justify-content-center justify-content-md-start align-items-center mb-4"
-                >
-                  <Bullet className="text-primary me-2" />
-                  <h4 className="font-roboto fs-h4 mb-0">{title}</h4>
-                </Row>
+                <h4 className="d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+                  <Bullet className="text-primary fs-6 me-2" />
+                  <span className="font-roboto fs-h4">{title}</span>
+                </h4>
                 <Row xs={1}>
                   {names.map((name) => (
                     <Col key={name} className="fs-h6">
