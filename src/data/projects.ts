@@ -17,45 +17,84 @@ const projects: ProjectType[] = [
   {
     id: 1,
     title: 'Financial Modeling',
-    description: 'SPA that shows up-to-date data about the stock market.',
+    description:
+      'A real-time Single Page Application (SPA) that offers comprehensive stock market data. Users can explore financial statements for various companies, enjoy interactive features like search and sorting, and access information on over 17,000 stocks.',
     images: {
       mobile:
         'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
         'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_desktop.png?raw=true',
     },
-    languages: ['React', 'Redux', 'TypeScript', 'Bootstrap'],
+    languages: [
+      'React',
+      'Redux',
+      'TypeScript',
+      'React-Bootstrap',
+      'Vitest',
+      'React Testing Library',
+    ],
     liveVersion: 'https://financial-modeling.dicodiaz.com.co/',
     sourceCode: 'https://github.com/dicodiaz/financial-modeling',
   },
   {
     id: 2,
+    title: 'Math Magicians',
+    description:
+      'This is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and to read a random math-related quote. Built using React and Bootstrap.',
+    images: {
+      mobile:
+        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_mobile.png?raw=true',
+      desktop:
+        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop.png?raw=true',
+    },
+    languages: ['React', 'JavaScript', 'Bootstrap', 'CSS', 'Jest', 'React Testing Library'],
+    liveVersion: 'https://math-magicians.dicodiaz.com.co',
+    sourceCode: 'https://github.com/dicodiaz/math-magicians',
+  },
+  {
+    id: 3,
     title: 'TV Shows Finder',
     description:
       'A quick tool to look for any TV show. Built based on 2 external APIs: TvMaze API and Involvement API.',
     images: {
       mobile:
-        'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot.png?raw=true',
+        'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
-        'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot-2.png?raw=true',
+        'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_desktop.png?raw=true',
     },
-    languages: ['JavaScript', 'Webpack', 'Bootstrap', 'HTML', 'CSS'],
+    languages: ['JavaScript', 'Webpack', 'Bootstrap', 'HTML', 'Jest'],
     liveVersion: 'https://tv-shows-finder.dicodiaz.com.co/',
     sourceCode: 'https://github.com/dicodiaz/tv-shows-finder',
   },
   {
-    id: 3,
-    title: 'Math Magicians',
+    id: 4,
+    title: 'SmartSpender',
     description:
-      'This is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and to read a random math-related quote. Built using React and Bootstrap.',
+      'A mobile web application where you can manage your budget: you have a list of purchases associated with a category, so that you can see how much money you spent and on what.',
     images: {
-      mobile: 'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot.png?raw=true',
+      mobile:
+        'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
-        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot-2.png?raw=true',
+        'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_mobile.png?raw=true',
     },
-    languages: ['React', 'Bootstrap', 'Jest', 'React Testing Library'],
-    liveVersion: 'https://math-magicians.dicodiaz.com.co',
-    sourceCode: 'https://github.com/dicodiaz/math-magicians',
+    languages: ['Ruby on Rails', 'ERB', 'RSpec', 'Capybara'],
+    liveVersion: 'https://smart-spender.onrender.com/welcome',
+    sourceCode: 'https://github.com/dicodiaz/SmartSpender',
+  },
+  {
+    id: 4,
+    title: 'SmartSpender',
+    description:
+      'A mobile web application where you can manage your budget: you have a list of purchases associated with a category, so that you can see how much money you spent and on what.',
+    images: {
+      mobile:
+        'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_mobilea.png?raw=true',
+      desktop:
+        'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_mobilea.png?raw=true',
+    },
+    languages: ['Ruby on Rails', 'ERB', 'RSpec', 'Capybara'],
+    liveVersion: 'https://smart-spender.onrender.com/welcome',
+    sourceCode: 'https://github.com/dicodiaz/SmartSpender',
   },
 ];
 
