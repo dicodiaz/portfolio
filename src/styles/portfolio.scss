@@ -54,6 +54,7 @@
 
   .card:hover > .card-img {
     opacity: 100 !important;
+    height: calc(100% - 3.2rem);
   }
 
   .card-img-overlay {
@@ -65,20 +66,7 @@
   }
 
   .card > .btn {
-    visibility: hidden;
-    margin-bottom: -3.625rem;
-    transition:
-      color 0.15s ease-in-out,
-      background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out,
-      box-shadow 0.15s ease-in-out,
-      visibility 0.15s ease-in-out,
-      margin 0.15s ease-in-out;
-  }
-
-  .card:hover > .btn {
-    visibility: visible;
-    margin-bottom: 0;
+    margin-bottom: -3.2rem;
   }
 
   .me-2-half {

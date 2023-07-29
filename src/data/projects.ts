@@ -81,21 +81,6 @@ const projects: ProjectType[] = [
     liveVersion: 'https://smart-spender.onrender.com/welcome',
     sourceCode: 'https://github.com/dicodiaz/SmartSpender',
   },
-  {
-    id: 4,
-    title: 'SmartSpender',
-    description:
-      'A mobile web application where you can manage your budget: you have a list of purchases associated with a category, so that you can see how much money you spent and on what.',
-    images: {
-      mobile:
-        'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_mobilea.png?raw=true',
-      desktop:
-        'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_mobilea.png?raw=true',
-    },
-    languages: ['Ruby on Rails', 'ERB', 'RSpec', 'Capybara'],
-    liveVersion: 'https://smart-spender.onrender.com/welcome',
-    sourceCode: 'https://github.com/dicodiaz/SmartSpender',
-  },
 ];
 
 export default projects;
