@@ -1,10 +1,11 @@
+import { v4 as uuidv4 } from 'uuid';
 export type ImagesType = {
   mobile: string;
   desktop: string;
 };
 
 export type ProjectType = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   images: ImagesType;
@@ -15,7 +16,7 @@ export type ProjectType = {
 
 const projects: ProjectType[] = [
   {
-    id: 1,
+    id: uuidv4(),
     title: 'Financial Modeling',
     description:
       'A Single Page Application (SPA) that offers comprehensive stock market data. Users can explore financial statements for various companies, enjoy interactive features like search and sorting, and access information on over 17,000 stocks.',
@@ -37,7 +38,7 @@ const projects: ProjectType[] = [
     sourceCode: 'https://github.com/dicodiaz/financial-modeling',
   },
   {
-    id: 2,
+    id: uuidv4(),
     title: 'Math Magicians',
     description:
       'This is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and to read a random math-related quote. Built using React and Bootstrap.',
@@ -52,7 +53,7 @@ const projects: ProjectType[] = [
     sourceCode: 'https://github.com/dicodiaz/math-magicians',
   },
   {
-    id: 3,
+    id: uuidv4(),
     title: 'TV Shows Finder',
     description:
       'A quick tool to look for any TV show. Built based on 2 external APIs: TvMaze API and Involvement API.',
@@ -67,7 +68,7 @@ const projects: ProjectType[] = [
     sourceCode: 'https://github.com/dicodiaz/tv-shows-finder',
   },
   {
-    id: 4,
+    id: uuidv4(),
     title: 'SmartSpender',
     description:
       'A mobile web application where you can manage your budget: you have a list of purchases associated with a category, so that you can see how much money you spent and on what.',

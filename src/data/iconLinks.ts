@@ -1,22 +1,28 @@
 import { IconType } from 'react-icons';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaMediumM } from 'react-icons/fa';
+import { v4 as uuidv4 } from 'uuid';
 
 export type IconLinkType = {
-  id: number;
+  id: string;
   href: string;
   Icon: IconType;
 };
 
 const iconLinks: IconLinkType[] = [
   {
-    id: 1,
+    id: uuidv4(),
     href: 'https://github.com/dicodiaz',
     Icon: FaGithub,
   },
   {
-    id: 2,
+    id: uuidv4(),
     href: 'https://www.linkedin.com/in/dico-diaz-dussan/',
     Icon: FaLinkedinIn,
+  },
+  {
+    id: uuidv4(),
+    href: 'https://medium.com/@dicodiaz',
+    Icon: FaMediumM,
   },
 ];
 

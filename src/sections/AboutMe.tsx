@@ -26,7 +26,7 @@ const AboutMe: FC = () => {
               <div>
                 <Button
                   as="a"
-                  href="https://docs.google.com/document/d/1q4xKYIr9XpbfmBaQUkkvhjxuHOLx7yXifxokCCEgpco/edit?usp=sharing"
+                  href="https://docs.google.com/document/d/1Ty27_GOzJzLqzVfrGNIu-ipeaSthdX-XtgGxCa_dbIc/edit?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                 >

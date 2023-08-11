@@ -1,8 +1,9 @@
 import { IconType } from 'react-icons';
 import { BsCircleFill, BsDiamondFill, BsSquareFill } from 'react-icons/bs';
+import { v4 as uuidv4 } from 'uuid';
 
 export type SkillType = {
-  id: number;
+  id: string;
   Bullet: IconType;
   title: string;
   names: string[];
@@ -10,7 +11,7 @@ export type SkillType = {
 
 const skills: SkillType[] = [
   {
-    id: 1,
+    id: uuidv4(),
     Bullet: BsDiamondFill,
     title: 'Front-end',
     names: [
@@ -30,13 +31,13 @@ const skills: SkillType[] = [
     ],
   },
   {
-    id: 2,
+    id: uuidv4(),
     Bullet: BsSquareFill,
     title: 'Back-end',
     names: ['Ruby on Rails', 'Ruby', 'PostgreSQL', 'RSpec', 'Capybara', 'Selenium', 'REST APIs'],
   },
   {
-    id: 3,
+    id: uuidv4(),
     Bullet: BsCircleFill,
     title: 'Tools & Methods',
     names: [
@@ -46,6 +47,7 @@ const skills: SkillType[] = [
       'GitHub',
       'Netlify',
       'Render',
+      'Heroku',
       'Design Patterns',
       'Responsive Design',
       'TDD',
