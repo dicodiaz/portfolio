@@ -15,18 +15,18 @@ const ProjectModal: FC<ProjectModalProps> = ({ data, show, onHide }) => {
 
   return (
     <Modal show={show} onHide={onHide} size="xl" centered>
-      <Modal.Header className="pb-4-half pb-md-0" closeButton>
+      <Modal.Header closeButton>
         <Modal.Title className="font-roboto fs-h4 text-info">{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Row xs="auto" className="mb-3 mb-md-4">
+        <Row xs="auto" className="mx-0 g-0 mb-3 mb-md-4">
           {languages.map((language) => (
             <Badge key={language} bg="white">
               {language}
             </Badge>
           ))}
         </Row>
-        <Row xs={1}>
+        <Row xs={1} className="mx-0 g-0">
           <Col
             md={7}
             className="d-flex justify-content-center align-items-center mb-4 mb-md-0 pe-md-4"
@@ -35,7 +35,7 @@ const ProjectModal: FC<ProjectModalProps> = ({ data, show, onHide }) => {
           </Col>
           <Col md={5} className="d-md-flex flex-md-column justify-content-md-between">
             <p className="mb-3">{description}</p>
-            <Row xs="auto" className="justify-content-between justify-content-md-start">
+            <Row xs="auto" className="mx-0 g-0 justify-content-between justify-content-md-start">
               <Col>
                 <Button
                   as="a"

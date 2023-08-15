@@ -15,7 +15,13 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (min-width: 1200px) {
+  #headline {
+    background-position: top right;
+  }
+}
+
+@media screen and (max-width: 355px) {
   #headline {
     background: none;
   }

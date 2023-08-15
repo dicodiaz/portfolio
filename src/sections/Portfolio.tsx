@@ -24,9 +24,9 @@ const Portfolio: FC = () => {
 
   return (
     <>
-      <Container as="section" id="portfolio" className="min-vh-100 py-6 px-4 px-md-5 px-lg-6" fluid>
+      <Container as="section" id="portfolio" className="min-vh-100 py-6 px-3 px-md-5" fluid>
         <PortfolioHeading />
-        <Row xs={1} className="projects">
+        <Row xs={1} className="mx-0 g-0 projects">
           {projects.map((project, index) => {
             const { id, images } = project;
             const image = isDesktop ? images.desktop : images.mobile;

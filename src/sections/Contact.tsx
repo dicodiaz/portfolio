@@ -24,13 +24,13 @@ const Contact: FC = () => {
       <Container
         as="section"
         id="contact"
-        className="min-vh-100 d-flex align-items-center py-6 px-4 px-md-5 px-lg-6"
+        className="min-vh-100 d-flex align-items-center py-6 px-3 px-md-5"
         fluid
       >
-        <Row xs={1}>
+        <Row xs={1} className="mx-0 g-0">
           <Col md={5} lg={4}>
             <motion.h4
-              className="font-roboto fs-h4 text-center text-md-start mb-5-half mb-md-0"
+              className="font-roboto fs-h4 text-center text-md-start"
               initial={{ opacity: 0, x: -200 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}

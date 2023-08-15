@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import '../styles/header.scss';
 
 const Header: FC = () => {
@@ -22,7 +22,7 @@ const Header: FC = () => {
         onToggle={handleToggle}
         collapseOnSelect
       >
-        <Container className="px-3 px-md-5 px-lg-6" fluid>
+        <Container className="px-3 px-md-5" fluid>
           <Navbar.Brand href="#headline" className="font-roboto text-white">
             Dico Diaz Dussan
           </Navbar.Brand>
@@ -36,13 +36,6 @@ const Header: FC = () => {
               <Nav.Link href="#about_me">About</Nav.Link>
               <div className="nav-link-separator" />
               <Nav.Link href="#contact">Contact</Nav.Link>
-              <div className="nav-link-separator" />
-              <Nav.Link
-                href="mailto:dicodiaz@gmail.com"
-                className="d-none d-md-flex align-items-md-center"
-              >
-                <AiOutlineMail className="fs-5" />
-              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

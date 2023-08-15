@@ -13,7 +13,7 @@ const ContactForm: FC<ContactFormProps> = ({ submitting, onSubmit }) => {
   return (
     <Form onSubmit={onSubmit}>
       {isDesktop ? (
-        <Row md={2} className="name d-none d-md-flex mb-4">
+        <Row md={2} className="mx-0 g-0 name d-none d-md-flex mb-2">
           <Col>
             <Form.Control
               type="text"
@@ -36,7 +36,7 @@ const ContactForm: FC<ContactFormProps> = ({ submitting, onSubmit }) => {
       ) : (
         <Form.Control
           type="text"
-          className="border-0 border-bottom mb-4 d-md-none"
+          className="border-0 border-bottom mb-2 d-md-none"
           name="full_name"
           placeholder="Full name"
           required
@@ -44,21 +44,21 @@ const ContactForm: FC<ContactFormProps> = ({ submitting, onSubmit }) => {
       )}
       <Form.Control
         type="email"
-        className="border-0 border-bottom mb-4"
+        className="border-0 border-bottom mb-2"
         name="email"
         placeholder="Email address"
         required
       />
       <Form.Control
         as="textarea"
-        className="text-area border-0 border-bottom mb-4"
+        className="text-area border-0 border-bottom mb-3"
         name="msg"
         rows={3}
         placeholder="Write me something"
         required
       />
       <div className="d-flex justify-content-center justify-content-md-start">
-        <Button type="submit" className="btn-submit" disabled={submitting}>
+        <Button type="submit" disabled={submitting}>
           {submitting ? (
             <>
               <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />

@@ -13,8 +13,6 @@ $info: #172b4d;
 $font-family-base: 'Inter';
 $headings-font-family: 'Crete Round';
 
-$grid-gutter-width: 0;
-
 $navbar-brand-font-size: 1.125rem;
 
 $paragraph-margin-bottom: 0.75rem;
@@ -27,22 +25,18 @@ $badge-font-weight: 500;
 $badge-color: #091e42;
 $badge-padding-y: 0.625em;
 $badge-padding-x: 0.75em;
-$badge-border-radius: 0;
 
 $btn-padding-y: 0.75rem;
 $btn-padding-x: 0.75rem;
 $btn-font-size: 1.0625rem;
 $btn-font-weight: 700;
 $btn-disabled-opacity: 1;
-$btn-border-radius: 0;
 
 $card-border-width: 0;
-$card-border-radius: 0;
 $card-height: 25rem;
 $card-color: white;
 
 $modal-dialog-margin: 1rem;
-$modal-content-border-radius: 0;
 $modal-header-border-width: 0;
 $modal-md: 96%;
 $modal-lg: 80%;
@@ -53,9 +47,11 @@ $input-padding-x: 1rem;
 $input-font-size: 0.9375rem;
 $input-color: darken(#979493, 15%);
 $input-border-color: $light;
-$input-border-radius: 0;
 $input-focus-box-shadow: none;
 $input-placeholder-color: #979493;
+$input-transition:
+  padding 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out;
 
 $toast-box-shadow: none;
 
@@ -75,18 +71,18 @@ $toast-box-shadow: none;
   @include button-variant($primary, $primary, white, #fff5e1, $primary, $primary);
 
   letter-spacing: 0.03188rem;
-}
 
-.btn-primary:active {
-  background-color: #e05304 !important;
-  border-color: #e05304 !important;
-  color: #f4f1f0 !important;
-}
+  &:active {
+    background-color: #e05304 !important;
+    border-color: #e05304 !important;
+    color: #f4f1f0 !important;
+  }
 
-.btn-primary:disabled {
-  background-color: #f4f1f0 !important;
-  border-color: #f4f1f0 !important;
-  color: #5b5957 !important;
+  &:disabled {
+    background-color: #f4f1f0 !important;
+    border-color: #f4f1f0 !important;
+    color: #5b5957 !important;
+  }
 }
 
 .fs-h1 {
@@ -119,9 +115,21 @@ $toast-box-shadow: none;
   line-height: 2.7rem !important;
 }
 
-@media screen and (min-width: 992px) {
-  .px-lg-6 {
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
+.py-6 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.pt-6 {
+  padding-top: 4rem !important;
+}
+
+a {
+  transition: color 0.15s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .pb-7 {
+    padding-bottom: 8rem;
   }
 }

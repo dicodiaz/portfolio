@@ -6,10 +6,10 @@ const Footer = () => (
   <Container
     as="footer"
     id="footer"
-    className="py-3 border-top border-footer position-absolute bottom-0"
+    className="py-2 border-top border-footer position-absolute bottom-0"
     fluid
   >
-    <Row xs="auto" className="justify-content-center">
+    <Row xs="auto" className="mx-0 g-0 justify-content-center">
       {icons.map((icon) => {
         const { id, href, Icon } = icon;
         return (

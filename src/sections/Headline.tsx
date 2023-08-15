@@ -18,19 +18,19 @@ const Headline: FC = () => {
     <Container
       as="section"
       id="headline"
-      className="bg-dark text-white min-vh-100 d-flex align-items-center"
+      className="bg-dark text-white min-vh-100 d-flex align-items-center px-3 px-md-5"
       fluid
     >
-      <Row className="pt-5 px-3 px-md-5 px-lg-6">
-        <Col md={5} lg={6} xl={7}>
-          <Row className="flex-column flex-md-row">
-            <Col className="ps-md-5">
+      <Row className="mx-0 g-0 pt-5">
+        <Col md={7}>
+          <Row className="mx-0 g-0 flex-column flex-md-row">
+            <Col className="ps-md-4 ps-lg-5">
               <h1 className="text-primary fs-h2">
                 Hey There.
                 <br />
                 I'm Dico.
               </h1>
-              <h5 className="font-roboto fs-h5">I'm a Software Developer</h5>
+              <h5 className="font-roboto fs-h4">I'm a Full-Stack Software Developer</h5>
               <p className="font-poppins">
                 I can help you build a product, feature, or website. Please look through some of my
                 work and experience. If you like what you see and have a project you need to be
@@ -43,7 +43,7 @@ const Headline: FC = () => {
               className="d-md-flex flex-md-column justify-content-md-center"
             >
               <motion.div animate={iconsAnimation}>
-                <Row xs="auto" className="flex-md-column">
+                <Row xs="auto" className="mx-0 g-0 flex-md-column">
                   {iconLinks.map((icon) => {
                     const { id, href, Icon } = icon;
 

@@ -5,7 +5,7 @@ import '../styles/portfolio.scss';
 
 const PortfolioHeading: FC = () => {
   return (
-    <Row className="flex-column flex-md-row mb-6">
+    <Row className="mx-0 g-0 flex-column flex-md-row mb-5 mb-md-4">
       <Col xs="auto">
         <motion.h3
           className="text-center fs-h3 mb-4 mb-md-0 ms-md-2"

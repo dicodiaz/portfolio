@@ -11,10 +11,10 @@ const Skills: FC = () => {
   return (
     <Container
       id="skills"
-      className="bg-dark text-white text-center text-md-start px-4 px-md-5 px-lg-6"
+      className="bg-dark text-white text-center text-md-start py-6 px-3 px-md-5"
       fluid
     >
-      <Row xs={1} md={3} className="py-6">
+      <Row xs={1} md={3} className="mx-0 g-0">
         {skills.map((skill, index) => {
           const { id, title, Bullet, names } = skill;
           return (
@@ -29,7 +29,7 @@ const Skills: FC = () => {
                   <Bullet className="text-primary fs-6 me-2" />
                   <span className="font-roboto fs-h4">{title}</span>
                 </h4>
-                <Row xs={1}>
+                <Row xs={1} className="mx-0 g-0">
                   {names.map((name) => (
                     <Col key={name} className="fs-h6">
                       {name}

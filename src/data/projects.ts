@@ -26,14 +26,7 @@ const projects: ProjectType[] = [
       desktop:
         'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_desktop.png?raw=true',
     },
-    languages: [
-      'React',
-      'Redux',
-      'TypeScript',
-      'React-Bootstrap',
-      'Vitest',
-      'React Testing Library',
-    ],
+    languages: ['React', 'Redux', 'TypeScript', 'React-Bootstrap', 'Vitest'],
     liveVersion: 'https://financial-modeling.dicodiaz.com.co/',
     sourceCode: 'https://github.com/dicodiaz/financial-modeling',
   },
@@ -41,14 +34,14 @@ const projects: ProjectType[] = [
     id: uuidv4(),
     title: 'Math Magicians',
     description:
-      'This is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and to read a random math-related quote. Built using React and Bootstrap.',
+      'A Single Page Application (SPA) that allows users to make simple calculations and to read a random math-related quote.',
     images: {
       mobile:
         'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
         'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop.png?raw=true',
     },
-    languages: ['React', 'JavaScript', 'Bootstrap', 'CSS', 'Jest', 'React Testing Library'],
+    languages: ['React', 'JavaScript', 'Bootstrap', 'Jest'],
     liveVersion: 'https://math-magicians.dicodiaz.com.co',
     sourceCode: 'https://github.com/dicodiaz/math-magicians',
   },

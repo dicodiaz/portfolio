@@ -14,7 +14,7 @@ const HighlightedProject: FC<HighlightedProjectProps> = ({ data, image, onSeePro
 
   return (
     <Col className="px-md-2">
-      <Row className="mb-4 flex-column flex-md-row">
+      <Row className="mx-0 g-0 mb-4 flex-column flex-md-row">
         <Col md={6} className="mb-4 mb-md-0 d-flex justify-content-center align-items-center">
           <motion.div
             initial={{ opacity: 0, x: -200 }}
@@ -34,7 +34,7 @@ const HighlightedProject: FC<HighlightedProjectProps> = ({ data, image, onSeePro
           >
             <h4 className="fs-h4">{title}</h4>
             <p>{description}</p>
-            <Row xs="auto" className="mb-1">
+            <Row xs="auto" className="mx-0 g-0 mb-1">
               {languages.map((language) => (
                 <Badge key={language} bg="white">
                   {language}
