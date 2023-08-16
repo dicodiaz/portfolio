@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 768px) {
   #about_me {
-    background: url('../assets/bg_about_desktop.svg') right -2rem center no-repeat;
+    background: url('../assets/bg_about_desktop.svg') center right -4rem no-repeat;
     background-size: 30rem;
   }
 }
@@ -18,5 +18,11 @@
 @media screen and (min-width: 992px) {
   #about_me {
     background-size: 35rem;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  #about_me {
+    background: none;
   }
 }
