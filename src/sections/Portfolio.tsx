@@ -10,6 +10,7 @@ import '../styles/portfolio.scss';
 
 const Portfolio: FC = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
+  const isLargeDesktop = useMediaQuery('(min-width: 992px)');
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState<ProjectType>(projects[0]);
 
@@ -26,11 +27,12 @@ const Portfolio: FC = () => {
     <>
       <Container as="section" id="portfolio" className="min-vh-100 py-6 px-3 px-md-5" fluid>
         <PortfolioHeading />
-        <Row xs={1} className="mx-0 g-0 projects">
+        <Row xs={1} className="mx-0 g-0 projects justify-content-center">
           {projects.map((project, index) => {
             const { id, images } = project;
             const image = isDesktop ? images.desktop : images.mobile;
-            const delay = isDesktop ? 0.5 * index : 0;
+            const columns = isLargeDesktop ? 3 : 2;
+            const delay = isDesktop ? 0.5 * ((index - 1) % columns) : 0;
 
             if (index === 0) {
               return (
