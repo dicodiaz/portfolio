@@ -14,7 +14,7 @@ const Project: FC<ProjectProps> = ({ data, image, onSeeProjectClick, delay }) =>
   const { title, description, languages } = data;
 
   return (
-    <Col md={6} lg={4} xl={3} className="project px-md-2">
+    <Col md={6} lg={4} className="project px-md-2">
       <motion.div
         initial={{ opacity: 0, x: 200 }}
         whileInView={{ opacity: 1, x: 0 }}
