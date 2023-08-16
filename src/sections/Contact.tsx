@@ -2,6 +2,7 @@ import { useForm } from '@formspree/react';
 import { motion } from 'framer-motion';
 import { FC, useEffect, useState } from 'react';
 import { Col, Container, Row, Toast, ToastContainer } from 'react-bootstrap';
+import { AiOutlineMail } from 'react-icons/ai';
 import ContactForm, { ContactFormProps } from '../components/ContactForm';
 import '../styles/contact.scss';
 
@@ -30,7 +31,7 @@ const Contact: FC = () => {
         <Row xs={1} className="mx-0 g-0">
           <Col md={5} lg={4}>
             <motion.h4
-              className="font-roboto fs-h4 text-center text-md-start"
+              className="font-roboto fs-2 text-center text-md-start"
               initial={{ opacity: 0, x: -200 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
@@ -39,6 +40,18 @@ const Contact: FC = () => {
               I'm always interested in hearing about new projects, so if you'd like to chat please
               get in touch.
             </motion.h4>
+            <motion.div
+              className="d-flex justify-content-center justify-content-md-start align-items-center py-2"
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
+              <a href="mailto:dicodiaz@gmail.com" className="pe-2">
+                <AiOutlineMail className="fs-2 text-footer-icons" />
+              </a>
+              <span>dicodiaz@gmail.com</span>
+            </motion.div>
           </Col>
           <Col md={7} lg={8} className="ps-md-4">
             <motion.div
