@@ -15,7 +15,10 @@ const HighlightedProject: FC<HighlightedProjectProps> = ({ data, image, onSeePro
   return (
     <Col className="px-md-2">
       <Row className="mx-0 g-0 mb-4 flex-column flex-md-row">
-        <Col md={6} className="mb-4 mb-md-0 d-flex justify-content-center align-items-center">
+        <Col
+          md={6}
+          className="mb-4 mb-md-0 d-flex align-items-md-center justify-content-md-center overflow-hidden h-25rem"
+        >
           <motion.div
             initial={{ opacity: 0, x: -200 }}
             whileInView={{ opacity: 1, x: 0 }}

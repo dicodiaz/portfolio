@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 export type ImagesType = {
   mobile: string;
   desktop: string;
+  xxlDesktop: string;
 };
 
 export type Links = {
@@ -31,8 +32,10 @@ const projects: ProjectType[] = [
         'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
         'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_desktop.png?raw=true',
+      xxlDesktop:
+        'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
     },
-    languages: ['React', 'Redux', 'TypeScript', 'React-Bootstrap', 'Vitest'],
+    languages: ['React', 'Redux', 'TypeScript', 'Bootstrap', 'Vitest'],
     linksList: [
       {
         liveVersion: 'https://financial-modeling.dicodiaz.com.co/',
@@ -49,8 +52,10 @@ const projects: ProjectType[] = [
         'https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
         'https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_desktop.png?raw=true',
+      xxlDesktop:
+        'https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
     },
-    languages: ['React', 'Redux', 'JavaScript', 'Ruby on Rails', 'Ruby'],
+    languages: ['React', 'Redux', 'JavaScript', 'Ruby on Rails'],
     linksList: [
       {
         label: 'Client:',
@@ -74,6 +79,8 @@ const projects: ProjectType[] = [
         'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
         'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_desktop.png?raw=true',
+      xxlDesktop:
+        'https://github.com/dicodiaz/SmartSpender/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
     },
     languages: ['Ruby on Rails', 'ERB', 'RSpec', 'Capybara'],
     linksList: [
@@ -93,8 +100,10 @@ const projects: ProjectType[] = [
         'https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_mobile.png?raw=true',
       desktop:
         'https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_desktop.png?raw=true',
+      xxlDesktop:
+        'https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_desktop_xxl.png?raw=true',
     },
-    languages: ['React', 'TypeScript'],
+    languages: ['React', 'TypeScript', 'Bootstrap'],
     linksList: [
       {
         liveVersion: 'https://sorting-algorithms.dicodiaz.com.co/',
@@ -112,6 +121,8 @@ const projects: ProjectType[] = [
         'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
         'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop.png?raw=true',
+      xxlDesktop:
+        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
     },
     languages: ['React', 'JavaScript', 'Bootstrap', 'Jest'],
     linksList: [
@@ -131,6 +142,8 @@ const projects: ProjectType[] = [
         'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_mobile.png?raw=true',
       desktop:
         'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_desktop.png?raw=true',
+      xxlDesktop:
+        'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
     },
     languages: ['JavaScript', 'Webpack', 'Bootstrap', 'HTML', 'Jest'],
     linksList: [

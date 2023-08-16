@@ -32,17 +32,22 @@
   margin-right: -0.5rem !important;
 }
 
+.card-img {
+  margin-top: -5rem;
+}
+
 @media screen and (min-width: 768px) {
   .card-img {
     height: 100%;
     transition:
       opacity 0.15s ease-in-out,
       height 0.15s ease-in-out;
+    margin-top: 0rem;
   }
 
   .card:hover > .card-img {
     opacity: 100 !important;
-    height: calc(100% - 3.2rem);
+    height: calc(100% - 2.4375rem);
   }
 
   .card-img-overlay {
@@ -88,5 +93,11 @@
 
   .fs-xs-7 {
     font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .h-25rem {
+    height: 25rem;
   }
 }
