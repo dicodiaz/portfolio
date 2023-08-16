@@ -17,14 +17,16 @@ const AboutMe: FC = () => {
             <Row className="mx-0 g-0">
               <h2 className="text-primary fs-h1">About me</h2>
               <Col md={10} lg={12}>
-                <p>
-                  Full-stack software developer with a background in developing efficient software
-                  applications in a global market. 2+ years of industry experience, including the
-                  web implementation of the transformative "signals" feature, which facilitated
-                  seamless migration from Client-Driven to Server-Driven UI by leveraging on the
-                  observer pattern for optimistic UI rendering. Strong skills include React,
-                  TypeScript, GraphQL, and Ruby on Rails.
-                </p>
+                <ul>
+                  <li>
+                    I like experimenting with new technologies and building impactful projects.
+                  </li>
+                  <li>I love solving DSA challenges. Hit me up for a peer session!</li>
+                  <li>2+ years of experience as a front-end developer.</li>
+                  <li>Electronic engineering graduate with a previous career as a RAN engineer.</li>
+                  <li>Dancing and taking long walks are my hobbies.</li>
+                  <li>I believe a day of hiking and nature is the ultimate solution for stress.</li>
+                </ul>
               </Col>
               <div>
                 <Button
