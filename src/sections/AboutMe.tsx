@@ -31,7 +31,7 @@ const AboutMe: FC = () => {
               <div>
                 <Button
                   as="a"
-                  href="https://docs.google.com/document/d/1Ty27_GOzJzLqzVfrGNIu-ipeaSthdX-XtgGxCa_dbIc/edit?usp=sharing"
+                  href="https://drive.google.com/file/d/1nJ_ej3oF2-MZWytVIIeZWNVbkeEigJSi/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                 >
