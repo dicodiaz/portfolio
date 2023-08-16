@@ -41,7 +41,7 @@ const ProjectModal: FC<ProjectModalProps> = ({ data, show, onHide }) => {
 
                 return (
                   <Fragment key={liveVersion}>
-                    <small>{label}</small>
+                    {label && <small>{label}</small>}
                     <Row
                       xs="auto"
                       className="mx-0 g-0 justify-content-between justify-content-md-start"
