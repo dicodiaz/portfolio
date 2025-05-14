@@ -1,9 +1,0 @@
-.skill:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-@media screen and (min-width: 768px) {
-  .skill:not(:last-child) {
-    margin-bottom: 0;
-  }
-}
