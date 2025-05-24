@@ -16,6 +16,7 @@ const skills: SkillType[] = [
     title: 'Front-end',
     names: [
       'React',
+      'NextJS',
       'TypeScript',
       'JavaScript',
       'Redux',
@@ -28,6 +29,7 @@ const skills: SkillType[] = [
       'Vitest',
       'React Testing Library',
       'Cypress',
+      'Storybook',
     ],
   },
   {

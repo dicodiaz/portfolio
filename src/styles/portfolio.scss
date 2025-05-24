@@ -42,7 +42,7 @@
     transition:
       opacity 0.15s ease-in-out,
       height 0.15s ease-in-out;
-    margin-top: 0rem;
+    margin-top: 0;
   }
 
   .card:hover > .card-img {
@@ -67,7 +67,7 @@
   }
 
   .project:not(:last-child) {
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
 
   .project:nth-child(n + 4) {
@@ -80,9 +80,9 @@
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .project:nth-child(4) {
-    margin-top: 0rem;
+    margin-top: 0;
   }
 }
 

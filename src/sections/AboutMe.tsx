@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FC } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { aboutMeFacts } from '../data/aboutMeFacts';
 import '../styles/about_me.scss';
 
 const AboutMe: FC = () => {
@@ -17,18 +18,13 @@ const AboutMe: FC = () => {
             <Row className="mx-0 g-0">
               <h2 className="text-primary fs-h1">About me</h2>
               <Col md={10} lg={12}>
-                <ul>
-                  <li>
-                    I like experimenting with new technologies and building impactful projects.
-                  </li>
-                  <li>I love solving DSA challenges. Hit me up for a peer session!</li>
-                  <li>2+ years of experience as a front-end developer.</li>
-                  <li>Electronic engineering graduate with a previous career as a RAN engineer.</li>
-                  <li>Dancing and taking long walks are my hobbies.</li>
-                  <li>I believe a day of hiking and nature is the ultimate solution for stress.</li>
+                <ul className="ps-4">
+                  {aboutMeFacts.map(({ id, text }) => (
+                    <li key={id}>{text}</li>
+                  ))}
                 </ul>
               </Col>
-              <div>
+              <div className="mt-2">
                 <Button
                   as="a"
                   href="https://drive.google.com/file/d/1bz5sRkdVmrI01cBIIoe6riDsEUgIufaV/view?usp=sharing"
