@@ -5,13 +5,21 @@ import HighlightedProject from '../components/HighlightedProject';
 import PortfolioHeading from '../components/PortolioHeading';
 import Project from '../components/Project';
 import ProjectModal from '../components/ProjectModal';
-import projects, { ProjectType } from '../data/projects';
+import projects, { ImagesSizes, ProjectType } from '../data/projects';
 import '../styles/portfolio.scss';
 
 const Portfolio: FC = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
   const isLargeDesktop = useMediaQuery('(min-width: 992px)');
   const isXXLDesktop = useMediaQuery('(min-width: 1400px)');
+
+  let imageSize = ImagesSizes.MOBILE;
+  if (isXXLDesktop) {
+    imageSize = ImagesSizes.DESKTOP_XXL;
+  } else if (isDesktop) {
+    imageSize = ImagesSizes.DESKTOP;
+  }
+
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState<ProjectType>(projects[0]);
 
@@ -31,8 +39,7 @@ const Portfolio: FC = () => {
         <Row xs={1} className="mx-0 g-0 projects justify-content-center">
           {projects.map((project, index) => {
             const { id, images } = project;
-            const imageDesktop = isXXLDesktop ? images.xxlDesktop : images.desktop;
-            const image = isDesktop ? imageDesktop : images.mobile;
+            const image = images[imageSize];
             const columns = isLargeDesktop ? 3 : 2;
             const delay = isDesktop ? 0.5 * ((index - 1) % columns) : 0;
 
@@ -59,7 +66,12 @@ const Portfolio: FC = () => {
           })}
         </Row>
       </Container>
-      <ProjectModal data={modalData} show={showModal} onHide={handleModalHide} />
+      <ProjectModal
+        data={modalData}
+        show={showModal}
+        onHide={handleModalHide}
+        imageSize={imageSize}
+      />
     </>
   );
 };
