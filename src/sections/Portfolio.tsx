@@ -10,7 +10,7 @@ import '../styles/portfolio.scss';
 
 const Portfolio: FC = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
-  const isLargeDesktop = useMediaQuery('(min-width: 992px)');
+  const isXLDesktop = useMediaQuery('(min-width: 1200px)');
   const isXXLDesktop = useMediaQuery('(min-width: 1400px)');
 
   let imageSize = ImagesSizes.MOBILE;
@@ -40,7 +40,7 @@ const Portfolio: FC = () => {
           {projects.map((project, index) => {
             const { id, images } = project;
             const image = images[imageSize];
-            const columns = isLargeDesktop ? 3 : 2;
+            const columns = isXLDesktop ? 3 : 2;
             const delay = isDesktop ? 0.5 * ((index - 1) % columns) : 0;
 
             if (index === 0) {
