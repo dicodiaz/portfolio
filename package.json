@@ -45,5 +45,6 @@
     "stylelint-scss": "3.x",
     "typescript": "^5.0.2",
     "vite": "^4.4.0"
-  }
+  },
+  "packageManager": "pnpm@10.12.1"
 }

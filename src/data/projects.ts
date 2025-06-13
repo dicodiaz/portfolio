@@ -117,6 +117,27 @@ const projects: ProjectType[] = [
   },
   {
     id: uuidv4(),
+    title: 'Math Magicians',
+    description:
+      'A Single Page Application (SPA) that allows users to make simple calculations and to read a random math-related quote. It also exposes the Calculator component for any other web app to consume using Module Federation.',
+    images: {
+      mobile:
+        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_mobile.png?raw=true',
+      desktop:
+        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop.png?raw=true',
+      xxlDesktop:
+        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
+    },
+    languages: ['React', 'JavaScript', 'Bootstrap', 'Jest', 'Module Federation'],
+    linksList: [
+      {
+        liveVersion: 'https://math-magicians.dicodiaz.com.co',
+        sourceCode: 'https://github.com/dicodiaz/math-magicians',
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
     title: 'TV Shows Finder',
     description:
       'A quick tool to look for any TV show. Built based on 2 external APIs: TvMaze API and Involvement API.',
