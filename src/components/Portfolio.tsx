@@ -1,5 +1,5 @@
 import { projects } from "@/data";
-import { FeaturedProject } from ".";
+import { FeaturedProject, Project } from ".";
 
 export const Portfolio: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ export const Portfolio: React.FC = () => {
               return <FeaturedProject {...project} />;
 
             default:
-              return <div></div>;
+              return <Project {...project} />;
           }
         })}
       </div>
