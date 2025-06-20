@@ -1,135 +1,54 @@
-<a name="readme-top"></a>
+# React + TypeScript + Vite
 
-# 📗 Table of Contents
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- [📖 About the Project](#about-project)
-  - [🗝️ Key Features](#key-features)
-  - [🛠️ Built With](#built-with)
-- [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+Currently, two official plugins are available:
 
-# 📖 My Portfolio <a name="about-project"></a>
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-"Your **portfolio** is one of the most powerful tools in your software developer toolbox; it’s the easiest way of showing what you’re truly capable of as a developer, and is a quick and simple way for recruiters and hiring managers to get an idea of what you can bring to their teams." - Microverse
+## Expanding the ESLint configuration
 
-## 🗝️ Key Features <a name="key-features"></a>
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- Implements `typescript`
-- Implements `react-bootstrap`
-
-## 🛠️ Built With <a name="built-with"></a>
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://react.dev">React</a></li>
-  </ul>
-  <ul>
-    <li><a href="https://vitejs.dev/">Vite</a></li>
-  </ul>
-</details>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [https://portfolio.dicodiaz.com.co/](https://portfolio.dicodiaz.com.co/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-- Install [Node.js](https://nodejs.org/en)
-- Install [pnpm](https://pnpm.io/installation)
-
-### Setup
-
-Clone this repository to your desired folder:
-
-```sh
-  cd my-folder
-  git@github.com:dicodiaz/portfolio.git
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-### Install
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Install this project with:
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-```sh
-  cd portfolio
-  pnpm install
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
 ```
-
-### Usage
-
-To run the project, execute the following commands:
-
-```sh
-  pnpm dev
-```
-
-### Deployment
-
-There's a CD pipeline set up to track the `develop` branch.
-
-Please open a PR from your feature branch to `develop` in order to contribute.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 👥 Authors <a name="authors"></a>
-
-👤 **Dico Diaz Dussan**
-
-- GitHub: [@dicodiaz](https://github.com/dicodiaz)
-- LinkedIn: [Dico Diaz Dussan](https://www.linkedin.com/in/dico-diaz-dussan/)
-- Portfolio: [portfolio.dicodiaz.com.co](https://portfolio.dicodiaz.com.co)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] Add unit tests
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ⭐️ Show your support <a name="support"></a>
-
-Give a ⭐️ if you like this project!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-- Original [design](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?type=design&node-id=1-1471&mode=design&t=dHZSk5prnpuaeezH-0) idea by [Microverse](https://www.microverse.org).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./MIT.md) licensed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
