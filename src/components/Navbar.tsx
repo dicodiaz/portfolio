@@ -1,6 +1,6 @@
 import navItems from "@/data/navItems";
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,22 +15,22 @@ const Navbar: React.FC = () => {
 
   return (
     <header>
-      <nav className="relative z-50 bg-[#3C3A39] px-6 py-4 text-white">
+      <nav className="fixed top-0 right-0 left-0 z-50 bg-[#3C3A39] px-6 py-4">
         <div className="flex items-center justify-between">
           <a
             href="/"
-            className={`text-lg font-bold transition-opacity ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+            className={`text-lg font-bold text-white transition-opacity ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
           >
             Dico Diaz Dussan
           </a>
           <div className="hidden items-center space-x-8 md:flex">
-            {navItems.map((item) => (
+            {navItems.map(({ name, href }) => (
               <a
-                key={item.name}
-                href={item.href}
+                key={name}
+                href={href}
                 className="text-white transition-colors duration-200 hover:text-gray-300"
               >
-                {item.name}
+                {name}
               </a>
             ))}
           </div>
@@ -39,10 +39,10 @@ const Navbar: React.FC = () => {
             className="text-white focus:outline-none md:hidden"
             aria-label="Toggle menu"
           >
-            <Menu
+            <FaBars
               className={`absolute h-6 w-6 transition-opacity ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
             />
-            <X
+            <FaTimes
               className={`h-6 w-6 transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
             />
           </button>
@@ -54,14 +54,14 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div className="flex flex-col gap-y-8 px-6 pt-20">
-          {navItems.map((item) => (
+          {navItems.map(({ name, href }) => (
             <a
-              key={item.name}
-              href={item.href}
+              key={name}
+              href={href}
               onClick={closeMenu}
               className="border-b border-[#6F6C6B] pb-2 text-4xl font-light text-[#FFF5E1] transition-colors duration-200 hover:text-gray-300"
             >
-              {item.name}
+              {name}
             </a>
           ))}
         </div>
