@@ -1,12 +1,10 @@
-export interface NavItem {
+export type NavItem = {
   name: string;
   href: string;
-}
+};
 
-const navItems: NavItem[] = [
+export const navItems: NavItem[] = [
   { name: "Portfolio", href: "#portfolio" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
-
-export default navItems;

@@ -1,8 +1,8 @@
-import navItems from "@/data/navItems";
+import { navItems } from "@/data";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -69,5 +69,3 @@ const Navbar: React.FC = () => {
     </header>
   );
 };
-
-export default Navbar;

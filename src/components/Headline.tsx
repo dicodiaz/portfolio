@@ -1,18 +1,18 @@
-import socialLinks from "@/data/socialLinks";
+import { socialLinks } from "@/data";
 import style from "@/styles/headline.module.css";
 
-const Headline = () => {
+export const Headline: React.FC = () => {
   return (
     <section
-      className={`flex min-h-dvh flex-col justify-center px-6 pt-[60px] ${style.bgImage}`}
+      className={`flex min-h-dvh flex-col justify-center gap-y-3 px-6 pt-[60px] ${style.bgImage}`}
     >
-      <div className="mb-4">
-        <h1 className="font-crete mb-4 text-[56px] leading-16 text-[#FF6B00]">
+      <div className="flex flex-col gap-y-3">
+        <h1 className="font-crete text-[56px] leading-16 text-[#FF6B00]">
           Hey There.
           <br />
           I'm Dico.
         </h1>
-        <h2 className="font-roboto mb-4 text-2xl font-bold text-[#FFF5E1]">
+        <h2 className="font-roboto text-2xl font-bold text-[#FFF5E1]">
           I'm a Software Developer
         </h2>
         <p className="font-poppins text-white">
@@ -36,5 +36,3 @@ const Headline = () => {
     </section>
   );
 };
-
-export default Headline;

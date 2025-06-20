@@ -1,6 +1,4 @@
-import Navbar from "@/components/Navbar";
-import Button from "@/components/ui/button";
-import Headline from "./components/Headline";
+import { Headline, Navbar, Portfolio } from "./components";
 
 const App: React.FC = () => {
   return (
@@ -8,10 +6,8 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Headline />
+        <Portfolio />
       </main>
-      <div className="flex min-h-svh flex-col items-center justify-center">
-        <Button>Click me</Button>
-      </div>
     </>
   );
 };
