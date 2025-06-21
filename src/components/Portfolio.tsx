@@ -1,6 +1,6 @@
 import { projects } from "@/data";
 import { useState } from "react";
-import { Dialog, FeaturedProject, Project } from ".";
+import { Dialog, FeaturedProject, Project, Separator } from ".";
 import { ProjectDialog } from "./ProjectDialog";
 
 export const Portfolio: React.FC = () => {
@@ -13,7 +13,7 @@ export const Portfolio: React.FC = () => {
         <h2 className="font-crete text-center text-[40px] leading-13">
           My Recent Works
         </h2>
-        <div className="h-px bg-[#212121]" />
+        <Separator className="bg-[#212121]" />
       </div>
       <Dialog onOpenChange={setIsDialogOpen}>
         <div className="flex flex-wrap gap-y-6">

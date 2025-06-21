@@ -1,0 +1,46 @@
+import { myFacts } from "@/data";
+import { cn } from "@/lib/utils";
+import style from "@/styles/about.module.css";
+import { Button, Separator } from ".";
+
+export const About: React.FC = () => {
+  return (
+    <section
+      id="about"
+      className={cn(
+        "flex min-h-dvh flex-col justify-between px-6 pt-[90px]",
+        style.bgImage,
+      )}
+    >
+      <div className="flex flex-col gap-y-6">
+        <h2 className="font-crete text-7xl leading-[88px] text-[#FF6B00]">
+          About me
+        </h2>
+        <ul>
+          {myFacts.map((fact) => {
+            return (
+              <li
+                key={fact}
+                className="ms-3.5 list-disc text-[15px] text-white"
+              >
+                {fact}
+              </li>
+            );
+          })}
+        </ul>
+        <div>
+          <Button>
+            <a
+              href="https://docs.google.com/document/d/1IKDGwFQJv_Wr7vMaSQ-m8ztsQ1k7dZ1L2fAm4yz1U94/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Get my resume
+            </a>
+          </Button>
+        </div>
+      </div>
+      <Separator />
+    </section>
+  );
+};

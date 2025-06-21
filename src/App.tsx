@@ -1,4 +1,4 @@
-import { Headline, Navbar, Portfolio } from "./components";
+import { About, Headline, Navbar, Portfolio } from "./components";
 
 const App: React.FC = () => {
   return (
@@ -7,6 +7,7 @@ const App: React.FC = () => {
       <main>
         <Headline />
         <Portfolio />
+        <About />
       </main>
     </>
   );

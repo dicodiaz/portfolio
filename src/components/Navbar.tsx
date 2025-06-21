@@ -1,4 +1,5 @@
 import { navItems } from "@/data";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -19,7 +20,10 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <a
             href="/"
-            className={`text-lg font-bold text-white transition-opacity ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+            className={cn(
+              "text-lg font-bold text-white transition-opacity",
+              isMenuOpen ? "opacity-0" : "opacity-100",
+            )}
           >
             Dico Diaz Dussan
           </a>
@@ -40,18 +44,25 @@ export const Navbar: React.FC = () => {
             aria-label="Toggle menu"
           >
             <FaBars
-              className={`absolute h-6 w-6 transition-opacity ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+              className={cn(
+                "absolute h-6 w-6 transition-opacity",
+                isMenuOpen ? "opacity-0" : "opacity-100",
+              )}
             />
             <FaTimes
-              className={`h-6 w-6 transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
+              className={cn(
+                "h-6 w-6 transition-opacity",
+                isMenuOpen ? "opacity-100" : "opacity-0",
+              )}
             />
           </button>
         </div>
       </nav>
       <div
-        className={`fixed inset-0 z-40 bg-[#3C3A39] transition-transform duration-300 ease-in-out md:hidden ${
-          isMenuOpen ? "-translate-y-0" : "-translate-y-full"
-        }`}
+        className={cn(
+          "fixed inset-0 z-40 bg-[#3C3A39] transition-transform duration-300 ease-in-out md:hidden",
+          isMenuOpen ? "-translate-y-0" : "-translate-y-full",
+        )}
       >
         <div className="flex flex-col gap-y-8 px-6 pt-20">
           {navItems.map(({ name, href }) => (

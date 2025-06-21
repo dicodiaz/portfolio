@@ -1,10 +1,14 @@
 import { socialLinks } from "@/data";
+import { cn } from "@/lib/utils";
 import style from "@/styles/headline.module.css";
 
 export const Headline: React.FC = () => {
   return (
     <section
-      className={`flex min-h-dvh flex-col justify-center gap-y-3 px-6 pt-[60px] ${style.bgImage}`}
+      className={cn(
+        "flex min-h-dvh flex-col justify-center gap-y-3 px-6 pt-[60px]",
+        style.bgImage,
+      )}
     >
       <div className="flex flex-col gap-y-3">
         <h1 className="font-crete text-[56px] leading-16 text-[#FF6B00]">
