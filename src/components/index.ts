@@ -1,4 +1,5 @@
 export * from "./AboutMe";
+export * from "./Contact";
 export * from "./FeaturedProject";
 export * from "./Headline";
 export * from "./Navbar";

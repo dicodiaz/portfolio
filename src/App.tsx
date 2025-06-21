@@ -1,4 +1,11 @@
-import { About, Headline, Navbar, Portfolio, Skills } from "./components";
+import {
+  About,
+  Contact,
+  Headline,
+  Navbar,
+  Portfolio,
+  Skills,
+} from "./components";
 
 const App: React.FC = () => {
   return (
@@ -9,6 +16,7 @@ const App: React.FC = () => {
         <Portfolio />
         <About />
         <Skills />
+        <Contact />
       </main>
     </>
   );
