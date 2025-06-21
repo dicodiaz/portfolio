@@ -1,4 +1,5 @@
 import type { ProjectType } from "@/data";
+import { useEffect, useState } from "react";
 import { FaExternalLinkSquareAlt, FaGithub } from "react-icons/fa";
 import { Fragment } from "react/jsx-runtime";
 import {
@@ -7,16 +8,29 @@ import {
   DialogContent,
   DialogDescription,
   DialogTitle,
+  Skeleton,
 } from ".";
 
-export const ProjectDialog: React.FC<ProjectType> = ({
+export type ProjectDialogProps = ProjectType & {
+  isOpen: boolean;
+};
+
+export const ProjectDialog: React.FC<ProjectDialogProps> = ({
   title,
   description,
   images,
   languages,
   links,
+  isOpen,
 }) => {
   const { mobile, desktop, xxlDesktop } = images;
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setImageLoaded(false);
+    }
+  }, [isOpen]);
 
   return (
     <DialogContent
@@ -37,7 +51,8 @@ export const ProjectDialog: React.FC<ProjectType> = ({
           })}
         </div>
         <div className="flex justify-center">
-          <img src={mobile} alt={title} />
+          {!imageLoaded && <Skeleton className="h-[550px] w-full" />}
+          <img src={mobile} alt={title} onLoad={() => setImageLoaded(true)} />
         </div>
         <div className="flex flex-col gap-y-6">
           <DialogDescription>{description}</DialogDescription>

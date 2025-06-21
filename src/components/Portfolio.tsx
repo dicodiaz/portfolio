@@ -5,6 +5,7 @@ import { ProjectDialog } from "./ProjectDialog";
 
 export const Portfolio: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <section id="portfolio" className="min-h-dvh px-6 py-[60px]">
@@ -14,7 +15,7 @@ export const Portfolio: React.FC = () => {
         </h2>
         <div className="h-px bg-[#212121]" />
       </div>
-      <Dialog>
+      <Dialog onOpenChange={setIsDialogOpen}>
         <div className="flex flex-wrap gap-y-6">
           {projects.map((project, index) => {
             switch (index) {
@@ -38,7 +39,7 @@ export const Portfolio: React.FC = () => {
             }
           })}
         </div>
-        <ProjectDialog {...projects[selectedIndex]} />
+        <ProjectDialog {...projects[selectedIndex]} isOpen={isDialogOpen} />
       </Dialog>
     </section>
   );
