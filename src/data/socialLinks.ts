@@ -1,13 +1,13 @@
 import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedinIn, FaMediumM } from "react-icons/fa";
 
-export type SocialLink = {
+export type SocialLinkType = {
   Icon: IconType;
   href: string;
   label: string;
 };
 
-export const socialLinks = [
+export const socialLinks: SocialLinkType[] = [
   { Icon: FaGithub, href: "https://github.com/dicodiaz", label: "GitHub" },
   {
     Icon: FaLinkedinIn,

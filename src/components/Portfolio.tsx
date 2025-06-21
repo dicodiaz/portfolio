@@ -8,8 +8,8 @@ export const Portfolio: React.FC = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
-    <section id="portfolio" className="min-h-dvh px-6 py-[60px]">
-      <div className="flex w-full flex-col gap-y-6 pt-[60px] pb-20 md:flex-row">
+    <section id="portfolio" className="min-h-dvh px-6 pt-[90px] pb-[60px]">
+      <div className="flex w-full flex-col gap-y-6 pb-[60px] md:flex-row">
         <h2 className="font-crete text-center text-[40px] leading-13">
           My Recent Works
         </h2>
