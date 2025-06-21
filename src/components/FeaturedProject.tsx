@@ -1,14 +1,19 @@
-import type { ProjectType } from "@/data";
-import { Badge, Button } from ".";
+import { Badge, Button, DialogTrigger, type ProjectProps } from ".";
 
-export const FeaturedProject: React.FC<ProjectType> = ({
+export const FeaturedProject: React.FC<ProjectProps> = ({
   title,
   description,
   images,
   languages,
   links,
+  index,
+  setSelectedIndex,
 }) => {
   const { mobile, desktop, xxlDesktop } = images;
+
+  const handleButtonClick = () => {
+    setSelectedIndex(index);
+  };
 
   return (
     <div className="flex flex-col items-center gap-y-6">
@@ -28,7 +33,11 @@ export const FeaturedProject: React.FC<ProjectType> = ({
           })}
         </div>
         <div>
-          <Button size="lg">See project</Button>
+          <DialogTrigger asChild>
+            <Button size="lg" onClick={handleButtonClick}>
+              See project
+            </Button>
+          </DialogTrigger>
         </div>
       </div>
     </div>

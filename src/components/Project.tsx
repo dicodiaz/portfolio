@@ -7,16 +7,28 @@ import {
   CardDescription,
   CardFooter,
   CardTitle,
+  DialogTrigger,
 } from "./ui";
 
-export const Project: React.FC<ProjectType> = ({
+export type ProjectProps = ProjectType & {
+  index: number;
+  setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
+};
+
+export const Project: React.FC<ProjectProps> = ({
   title,
   description,
   images,
   languages,
   links,
+  index,
+  setSelectedIndex,
 }) => {
   const { mobile, desktop, xxlDesktop } = images;
+
+  const handleButtonClick = () => {
+    setSelectedIndex(index);
+  };
 
   return (
     <Card>
@@ -41,9 +53,11 @@ export const Project: React.FC<ProjectType> = ({
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full" size="lg">
-          See project
-        </Button>
+        <DialogTrigger asChild>
+          <Button className="w-full" size="lg" onClick={handleButtonClick}>
+            See project
+          </Button>
+        </DialogTrigger>
       </CardFooter>
     </Card>
   );
