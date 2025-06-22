@@ -16,10 +16,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <header>
-      <nav className="fixed top-0 z-50 w-full bg-[#3C3A39] px-6 py-4">
+      <nav className="fixed top-0 z-50 w-full bg-[#3C3A39] px-6 py-4 md:px-[10vw]">
         <div className="flex items-center justify-between">
           <a
-            href="/"
+            href="#headline"
             className={cn(
               "text-lg font-bold text-white transition-opacity",
               isMenuOpen ? "opacity-0" : "opacity-100",

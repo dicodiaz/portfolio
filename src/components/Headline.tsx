@@ -5,12 +5,13 @@ import style from "@/styles/headline.module.css";
 export const Headline: React.FC = () => {
   return (
     <section
+      id="headline"
       className={cn(
-        "flex min-h-dvh flex-col justify-center gap-y-3 px-6 pt-[60px]",
+        "flex min-h-dvh flex-col justify-center gap-y-3 px-6 pt-[60px] md:px-[10vw]",
         style.bgImage,
       )}
     >
-      <div className="flex flex-col gap-y-3">
+      <div className="flex flex-col gap-y-3 md:max-w-[40vw]">
         <h1 className="font-crete text-[56px] leading-16 text-[#FF6B00]">
           Hey There.
           <br />
@@ -25,7 +26,7 @@ export const Headline: React.FC = () => {
           you need coded, don't hesitate to contact me.
         </p>
       </div>
-      <div className="flex">
+      <div className="flex md:absolute md:left-[2.5vw] md:flex-col">
         {socialLinks.map(({ Icon, href, label }) => (
           <a
             key={label}

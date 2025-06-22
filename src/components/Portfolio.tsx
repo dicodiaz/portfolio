@@ -9,7 +9,7 @@ export const Portfolio: React.FC = () => {
 
   return (
     <section id="portfolio" className="min-h-dvh px-6 pt-[90px] pb-[60px]">
-      <div className="flex w-full flex-col gap-y-6 pb-[60px] md:flex-row">
+      <div className="flex w-full flex-col gap-y-6 pb-[60px]">
         <h2 className="font-crete text-center text-[40px] leading-13">
           My Recent Works
         </h2>

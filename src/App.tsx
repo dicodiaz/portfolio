@@ -1,12 +1,12 @@
 import {
   About,
   Contact,
+  Footer,
   Headline,
   Navbar,
   Portfolio,
   Skills,
 } from "./components";
-import { Footer } from "./components/Footer";
 
 const App: React.FC = () => {
   return (
