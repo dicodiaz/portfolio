@@ -13,19 +13,17 @@ import {
 export type ProjectProps = ProjectType & {
   index: number;
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
+  imgSrc: string;
 };
 
 export const Project: React.FC<ProjectProps> = ({
   title,
   description,
-  images,
+  imgSrc,
   languages,
-  links,
   index,
   setSelectedIndex,
 }) => {
-  const { mobile, desktop, xxlDesktop } = images;
-
   const handleButtonClick = () => {
     setSelectedIndex(index);
   };
@@ -34,7 +32,7 @@ export const Project: React.FC<ProjectProps> = ({
     <Card>
       <CardContent>
         <div className="max-h-80 overflow-y-hidden bg-black">
-          <img src={mobile} alt={title} className="opacity-30" />
+          <img src={imgSrc} alt={title} className="opacity-30" />
         </div>
         <div className="absolute bottom-0 flex flex-col gap-y-3 px-4 py-3">
           <CardTitle className="text-white">{title}</CardTitle>

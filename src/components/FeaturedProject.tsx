@@ -3,22 +3,19 @@ import { Badge, Button, DialogTrigger, type ProjectProps } from ".";
 export const FeaturedProject: React.FC<ProjectProps> = ({
   title,
   description,
-  images,
+  imgSrc,
   languages,
-  links,
   index,
   setSelectedIndex,
 }) => {
-  const { mobile, desktop, xxlDesktop } = images;
-
   const handleButtonClick = () => {
     setSelectedIndex(index);
   };
 
   return (
-    <div className="flex flex-col items-center gap-y-6">
-      <div className="max-h-64 overflow-y-hidden">
-        <img src={mobile} alt={title} />
+    <div className="flex w-full flex-none flex-col items-center gap-y-6 md:flex-row md:gap-x-6">
+      <div className="max-h-64 overflow-y-hidden md:max-h-none md:w-[47.5vw] md:flex-none">
+        <img src={imgSrc} alt={title} />
       </div>
       <div className="flex flex-col gap-y-3">
         <h3 className="font-crete text-[32px] leading-11">{title}</h3>
