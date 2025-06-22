@@ -6,17 +6,19 @@ import {
   Portfolio,
   Skills,
 } from "./components";
+import { Footer } from "./components/Footer";
 
 const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="relative">
         <Headline />
         <Portfolio />
         <About />
         <Skills />
         <Contact />
+        <Footer />
       </main>
     </>
   );

@@ -20,13 +20,13 @@ export const Contact: React.FC = () => {
     <>
       <section
         id="contact"
-        className="flex min-h-dvh flex-col gap-y-[58px] px-6 pt-[90px] pb-[60px]"
+        className="flex min-h-dvh flex-col justify-between px-6 pt-[90px] pb-[60px]"
       >
         <h2 className="text-center text-2xl font-bold">
           I'm always interested in hearing about new projects, so if you'd like
           to chat please get in touch.
         </h2>
-        <form className="flex flex-col gap-y-6" onSubmit={handleSubmit}>
+        <form className="mb-6 flex flex-col gap-y-6" onSubmit={handleSubmit}>
           <Input
             type="text"
             placeholder="Full name*"
