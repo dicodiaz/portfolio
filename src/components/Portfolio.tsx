@@ -22,7 +22,7 @@ export const Portfolio: React.FC = () => {
       className="min-h-dvh px-6 pt-[90px] pb-[60px] md:px-[10vw]"
     >
       <div className="flex w-full flex-col gap-y-6 pb-[60px] md:flex-row md:items-center md:gap-x-6">
-        <h2 className="font-crete text-center text-[40px] leading-13 md:flex-none">
+        <h2 className="text-center text-[40px] md:flex-none">
           My Recent Works
         </h2>
         <Separator className="bg-[#212121]" />

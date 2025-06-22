@@ -7,16 +7,10 @@ export const Skill: React.FC<SkillType> = ({ Bullet, title, names }) => {
   const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    const timeoutID = setTimeout(() => {
-      if (titleRef.current) {
-        const { height } = titleRef.current.getBoundingClientRect();
-        if (height > 44) {
-          setShouldAppendMinContent(true);
-        }
-      }
-    }, 0);
-
-    return () => clearTimeout(timeoutID);
+    const { clientHeight = 0 } = titleRef.current ?? {};
+    if (clientHeight > 48) {
+      setShouldAppendMinContent(true);
+    }
   }, []);
 
   return (
@@ -28,7 +22,7 @@ export const Skill: React.FC<SkillType> = ({ Bullet, title, names }) => {
         <Bullet className="text-lg text-[#FF6B00]" />
         <h3
           className={cn(
-            "font-crete text-[32px] leading-11 text-white",
+            "text-[32px] text-white",
             shouldAppendMinContent ? "w-min" : "",
           )}
           ref={titleRef}

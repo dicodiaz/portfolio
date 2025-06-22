@@ -5,7 +5,7 @@
 
 @media screen and (min-width: 768px) {
   .bgImage {
-    background: url("../assets/bg_about_desktop.svg") #1c1a19 bottom 10dvh right
+    background: url("../assets/bg_about_desktop.svg") #1c1a19 bottom 7vw right
       min(calc(35vw - 500px), 0px) no-repeat;
   }
 }
