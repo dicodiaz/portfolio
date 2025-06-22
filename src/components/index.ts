@@ -6,5 +6,6 @@ export * from "./Headline";
 export * from "./Navbar";
 export * from "./Portfolio";
 export * from "./Project";
+export * from "./Skill";
 export * from "./Skills";
 export * from "./ui";

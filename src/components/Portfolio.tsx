@@ -41,6 +41,7 @@ export const Portfolio: React.FC = () => {
               case 0:
                 return (
                   <FeaturedProject
+                    key={project.title}
                     {...project}
                     index={index}
                     setSelectedIndex={setSelectedIndex}
@@ -51,6 +52,7 @@ export const Portfolio: React.FC = () => {
               default:
                 return (
                   <Project
+                    key={project.title}
                     {...project}
                     index={index}
                     setSelectedIndex={setSelectedIndex}

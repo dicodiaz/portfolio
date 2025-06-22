@@ -19,7 +19,7 @@ export const skills: SkillType[] = [
       "Redux",
       "MobX",
       "GraphQL",
-      "Tailwind",
+      "TailwindCSS",
       "HTML5",
       "CSS3",
       "Jest",
