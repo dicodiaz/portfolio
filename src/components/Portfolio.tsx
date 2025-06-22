@@ -9,6 +9,12 @@ export const Portfolio: React.FC = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const isLargeDesktop = useMediaQuery("(min-width: 1280px)");
+  const { mobile, desktop, xxlDesktop } = projects[selectedIndex].images;
+  const selectedImgSrc = isLargeDesktop
+    ? xxlDesktop
+    : isDesktop
+      ? desktop
+      : mobile;
 
   return (
     <section
@@ -54,7 +60,11 @@ export const Portfolio: React.FC = () => {
             }
           })}
         </div>
-        <ProjectDialog {...projects[selectedIndex]} isOpen={isDialogOpen} />
+        <ProjectDialog
+          {...projects[selectedIndex]}
+          isOpen={isDialogOpen}
+          imgSrc={selectedImgSrc}
+        />
       </Dialog>
     </section>
   );
