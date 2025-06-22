@@ -13,7 +13,7 @@ export const FeaturedProject: React.FC<ProjectProps> = ({
   };
 
   return (
-    <div className="flex w-full flex-none flex-col items-center gap-y-6 md:flex-row md:gap-x-6">
+    <div className="flex w-full flex-none flex-col items-center gap-y-6 md:flex-row md:gap-x-6 md:px-3">
       <div className="max-h-64 overflow-y-hidden md:max-h-none md:w-[47.5vw] md:flex-none">
         <img src={imgSrc} alt={title} />
       </div>

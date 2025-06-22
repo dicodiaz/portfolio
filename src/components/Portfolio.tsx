@@ -22,7 +22,7 @@ export const Portfolio: React.FC = () => {
         <Separator className="bg-[#212121]" />
       </div>
       <Dialog onOpenChange={setIsDialogOpen}>
-        <div className="flex flex-wrap gap-y-6">
+        <div className="flex flex-wrap justify-center gap-y-6 md:-mx-3">
           {projects.map((project, index) => {
             const { mobile, desktop, xxlDesktop } = project.images;
             const imgSrc = isLargeDesktop
