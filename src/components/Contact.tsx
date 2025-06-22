@@ -67,7 +67,7 @@ export const Contact: React.FC = () => {
               name="message"
               required
             />
-            <div className="flex justify-center">
+            <div className="flex justify-center md:justify-start">
               <Button type="submit" disabled={submitting} className="w-[132px]">
                 {submitting ? (
                   <FaSpinner className="animate-spin" />
