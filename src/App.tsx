@@ -1,25 +1,25 @@
-import { FC } from 'react';
-import AboutMe from './sections/AboutMe';
-import Contact from './sections/Contact';
-import Footer from './sections/Footer';
-import Header from './sections/Header';
-import Headline from './sections/Headline';
-import Portfolio from './sections/Portfolio';
-import Skills from './sections/Skills';
-import './styles/app.scss';
+import {
+  About,
+  Contact,
+  Footer,
+  Headline,
+  Navbar,
+  Portfolio,
+  Skills,
+} from "./components";
 
-const App: FC = () => {
+const App: React.FC = () => {
   return (
     <>
-      <Header />
-      <main className="overflow-hidden">
+      <Navbar />
+      <main className="relative">
         <Headline />
         <Portfolio />
-        <AboutMe />
+        <About />
         <Skills />
         <Contact />
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 };

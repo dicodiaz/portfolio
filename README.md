@@ -24,8 +24,8 @@
 
 ## 🗝️ Key Features <a name="key-features"></a>
 
-- Implements `typescript`
-- Implements `react-bootstrap`
+- Implements TypeScript
+- Implements TailwindCSS
 
 ## 🛠️ Built With <a name="built-with"></a>
 

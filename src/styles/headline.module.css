@@ -1,0 +1,12 @@
+.bgImage {
+  background: url("../assets/bg_headline_mobile.svg") #1c1a19 right
+    bottom -3.5rem no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .bgImage {
+    background: url("../assets/bg_headline_desktop.svg") #1c1a19 top right
+      min(calc(25vw - 400px), 0px) no-repeat;
+    background-size: contain;
+  }
+}

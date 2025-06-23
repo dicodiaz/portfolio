@@ -1,12 +1,11 @@
-import { v4 as uuidv4 } from 'uuid';
-import expediaDesktop from '../assets/expedia_web_app_screenshot_desktop.png';
-import expediaDesktopXXL from '../assets/expedia_web_app_screenshot_desktop_xxl.png';
-import expediaMobile from '../assets/expedia_web_app_screenshot_mobile.png';
+import expediaDesktop from "@/assets/expedia_web_app_screenshot_desktop.png";
+import expediaDesktopXXL from "@/assets/expedia_web_app_screenshot_desktop_xxl.png";
+import expediaMobile from "@/assets/expedia_web_app_screenshot_mobile.png";
 
 export enum ImagesSizes {
-  MOBILE = 'mobile',
-  DESKTOP = 'desktop',
-  DESKTOP_XXL = 'xxlDesktop',
+  MOBILE = "mobile",
+  DESKTOP = "desktop",
+  DESKTOP_XXL = "xxlDesktop",
 }
 
 export type ImagesType = {
@@ -20,143 +19,150 @@ export type Links = {
 };
 
 export type ProjectType = {
-  id: string;
   title: string;
   description: string;
   images: ImagesType;
   languages: string[];
-  linksList: Links[];
+  links: Links[];
 };
 
-const projects: ProjectType[] = [
+export const projects: ProjectType[] = [
   {
-    id: uuidv4(),
-    title: 'Sort & Filters feature on Expedia',
+    title: "Sort & Filters feature on Expedia",
     description:
-      'Full-stack domain feature that allows users to quickly refine and organize their travel search results based on specific preferences. With sorting options, users can arrange listings by price, guest ratings, distance, or other criteria to find the most relevant options first. Filters enable travelers to narrow down results by parameters such as property type, amenities, star rating, neighborhood, and more, helping them efficiently discover accommodations or flights that best match their needs and budget. This functionality enhances the user experience by saving time and making decision-making easier.',
+      "Flexible search feature that lets travelers quickly sort and filter results by what matters most - price, ratings, distance, amenities, and more - making it easier to find the perfect place without the hassle.",
     images: {
       mobile: expediaMobile,
       desktop: expediaDesktop,
       xxlDesktop: expediaDesktopXXL,
     },
-    languages: ['React', 'MobX', 'TypeScript', 'GraphQL', 'SSR', 'SDUI', 'Cypress'],
-    linksList: [
+    languages: [
+      "React",
+      "MobX",
+      "TypeScript",
+      "GraphQL",
+      "SSR",
+      "SDUI",
+      "Cypress",
+    ],
+    links: [
       {
-        liveVersion: 'https://www.expedia.com/?currency=USD&langid=1033&siteid=1',
+        liveVersion:
+          "https://www.expedia.com/?currency=USD&langid=1033&siteid=1",
       },
     ],
   },
   {
-    id: uuidv4(),
-    title: 'Financial Modeling',
+    title: "Financial Modeling",
     description:
-      'A Single Page Application (SPA) that offers comprehensive stock market data. Users can explore financial statements for various companies, enjoy interactive features like search and sorting, and access information on over 17,000 stocks.',
+      "A Single Page Application (SPA) that offers comprehensive stock market data. Users can explore financial statements for various companies, enjoy interactive features like search and sorting, and access information on over 17,000 stocks.",
     images: {
       mobile:
-        'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_mobile.png?raw=true',
+        "https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_mobile.png?raw=true",
       desktop:
-        'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_desktop.png?raw=true',
+        "https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_desktop.png?raw=true",
       xxlDesktop:
-        'https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
+        "https://github.com/dicodiaz/financial-modeling/blob/develop/app_screenshot_desktop_xxl.png?raw=true",
     },
-    languages: ['React', 'Redux', 'TypeScript', 'Bootstrap', 'Vitest'],
-    linksList: [
+    languages: ["React", "Redux", "TypeScript", "Bootstrap", "Vitest"],
+    links: [
       {
-        liveVersion: 'https://financial-modeling.dicodiaz.com.co/',
-        sourceCode: 'https://github.com/dicodiaz/financial-modeling',
+        liveVersion: "https://financial-modeling.dicodiaz.com.co/",
+        sourceCode: "https://github.com/dicodiaz/financial-modeling",
       },
     ],
   },
   {
-    id: uuidv4(),
-    title: 'Videogames Rental',
-    description: 'A full-stack web application that allows users to rent vintage videogames.',
+    title: "Videogames Rental",
+    description:
+      "A full-stack web application that allows users to rent vintage videogames.",
     images: {
       mobile:
-        'https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_mobile.png?raw=true',
+        "https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_mobile.png?raw=true",
       desktop:
-        'https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_desktop.png?raw=true',
+        "https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_desktop.png?raw=true",
       xxlDesktop:
-        'https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
+        "https://github.com/dicodiaz/videogames_rental_client/blob/develop/app_screenshot_desktop_xxl.png?raw=true",
     },
-    languages: ['React', 'Redux', 'JavaScript', 'Ruby on Rails'],
-    linksList: [
+    languages: ["React", "Redux", "JavaScript", "Ruby on Rails"],
+    links: [
       {
-        label: 'Client:',
-        liveVersion: 'https://videogames-rental.dicodiaz.com.co/',
-        sourceCode: 'https://github.com/dicodiaz/videogames_rental_client',
+        label: "Client:",
+        liveVersion: "https://videogames-rental.dicodiaz.com.co/",
+        sourceCode: "https://github.com/dicodiaz/videogames_rental_client",
       },
       {
-        label: 'Server:',
-        liveVersion: 'https://www.dicodiaz.live',
-        sourceCode: 'https://github.com/dicodiaz/videogames_rental_server',
+        label: "Server:",
+        liveVersion: "https://www.dicodiaz.live",
+        sourceCode: "https://github.com/dicodiaz/videogames_rental_server",
       },
     ],
   },
 
   {
-    id: uuidv4(),
-    title: 'Sorting Algorithms',
+    title: "Sorting Algorithms",
     description:
-      'A visualization of 9+ sorting algorithms, including Quick Sort, Merge Sort, and more!',
+      "A visualization of 9+ sorting algorithms, including Quick Sort, Merge Sort, and more!",
     images: {
       mobile:
-        'https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_mobile.png?raw=true',
+        "https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_mobile.png?raw=true",
       desktop:
-        'https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_desktop.png?raw=true',
+        "https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_desktop.png?raw=true",
       xxlDesktop:
-        'https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_desktop_xxl.png?raw=true',
+        "https://github.com/dicodiaz/sorting-algorithms/blob/main/app_screenshot_desktop_xxl.png?raw=true",
     },
-    languages: ['React', 'TypeScript', 'Bootstrap'],
-    linksList: [
+    languages: ["React", "TypeScript", "Bootstrap"],
+    links: [
       {
-        liveVersion: 'https://sorting-algorithms.dicodiaz.com.co/',
-        sourceCode: 'https://github.com/dicodiaz/sorting-algorithms',
+        liveVersion: "https://sorting-algorithms.dicodiaz.com.co/",
+        sourceCode: "https://github.com/dicodiaz/sorting-algorithms",
       },
     ],
   },
   {
-    id: uuidv4(),
-    title: 'Math Magicians',
+    title: "Math Magicians",
     description:
-      'A Single Page Application (SPA) that allows users to make simple calculations and to read a random math-related quote. It also exposes the Calculator component for any other web app to consume using Module Federation.',
+      "A Single Page Application (SPA) that allows users to make simple calculations and to read a random math-related quote. It also exposes the Calculator component for any other web app to consume using Module Federation.",
     images: {
       mobile:
-        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_mobile.png?raw=true',
+        "https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_mobile.png?raw=true",
       desktop:
-        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop.png?raw=true',
+        "https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop.png?raw=true",
       xxlDesktop:
-        'https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
+        "https://github.com/dicodiaz/math-magicians/blob/develop/app_screenshot_desktop_xxl.png?raw=true",
     },
-    languages: ['React', 'JavaScript', 'Bootstrap', 'Jest', 'Module Federation'],
-    linksList: [
+    languages: [
+      "React",
+      "JavaScript",
+      "Bootstrap",
+      "Jest",
+      "Module Federation",
+    ],
+    links: [
       {
-        liveVersion: 'https://math-magicians.dicodiaz.com.co',
-        sourceCode: 'https://github.com/dicodiaz/math-magicians',
+        liveVersion: "https://math-magicians.dicodiaz.com.co",
+        sourceCode: "https://github.com/dicodiaz/math-magicians",
       },
     ],
   },
   {
-    id: uuidv4(),
-    title: 'TV Shows Finder',
+    title: "TV Shows Finder",
     description:
-      'A quick tool to look for any TV show. Built based on 2 external APIs: TvMaze API and Involvement API.',
+      "A quick tool to look for any TV show. Built based on 2 external APIs: TvMaze API and Involvement API.",
     images: {
       mobile:
-        'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_mobile.png?raw=true',
+        "https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_mobile.png?raw=true",
       desktop:
-        'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_desktop.png?raw=true',
+        "https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_desktop.png?raw=true",
       xxlDesktop:
-        'https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_desktop_xxl.png?raw=true',
+        "https://github.com/dicodiaz/tv-shows-finder/blob/develop/app_screenshot_desktop_xxl.png?raw=true",
     },
-    languages: ['JavaScript', 'Webpack', 'Bootstrap', 'HTML', 'Jest'],
-    linksList: [
+    languages: ["JavaScript", "Webpack", "Bootstrap", "HTML", "Jest"],
+    links: [
       {
-        liveVersion: 'https://tv-shows-finder.dicodiaz.com.co/',
-        sourceCode: 'https://github.com/dicodiaz/tv-shows-finder',
+        liveVersion: "https://tv-shows-finder.dicodiaz.com.co/",
+        sourceCode: "https://github.com/dicodiaz/tv-shows-finder",
       },
     ],
   },
 ];
-
-export default projects;
