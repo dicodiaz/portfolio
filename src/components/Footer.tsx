@@ -7,12 +7,12 @@ export const Footer: React.FC = () => {
         <a
           key={label}
           href={href}
-          className="p-2 text-[#505F79] transition-colors duration-200 hover:text-gray-300"
+          className="hover:animate-wiggle p-2 text-[#505F79] transition-colors duration-200 hover:text-[#404c61]"
           aria-label={label}
           target="_blank"
           rel="noreferrer"
         >
-          <Icon className="h-6 w-6" />
+          <Icon className="size-6 xl:size-8" />
         </a>
       ))}
     </footer>
